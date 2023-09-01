@@ -1,6 +1,11 @@
 // estas funciones son de ejemplo
 
-export const renderItems = () => {
-  return 'example';
-};
+const viewData = {
 
+  renderItems:(tipos)=>{
+    return tipos; 
+  }
+
+}
+
+export default viewData;

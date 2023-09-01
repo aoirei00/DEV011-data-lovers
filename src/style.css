@@ -1,0 +1,92 @@
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+.baner{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 70%;
+    row-gap: 10px;
+    border: 0px solid blue;
+    margin-left: auto;
+    margin-right:auto ;
+}
+
+.botonBuscador{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 0px solid red;
+    margin-left: auto;
+    margin-right: 0;
+    width: 12%;
+}
+
+.botonVista{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 0px solid green;
+    width: 20%;
+}
+
+#root{
+    width:97%;
+    border: 0px solid violet;
+    margin-right: auto; /*Este y el siguiente, permiten centrar el objeto, no su contenido*/
+    margin-left: auto;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    row-gap: 20px;
+}
+
+.tarjeta{
+    display: flex; /* permite que si contenido se muestre de forma flexible en una sola linea*/
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 0px solid black;
+    width: 300px;
+    padding: 0.6rem;
+    background-color: aquamarine;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.imgPokemon{
+    width: 60%;
+    border: 0px solid red;
+    background-color: white;
+    border-radius: 10px;
+}
+
+dl{
+    width: 85%;
+    border: 0px solid green;
+    padding: 1rem;
+    background-color: rgb(250, 227, 227);
+    border-radius: 10px;
+    margin-bottom: auto;
+}
+
+dl dt{
+    background-color: none;
+    font-weight: 600;
+}
+
+dl dd{
+    background-color: rgb(255, 248, 251);
+    padding: 5px;
+}

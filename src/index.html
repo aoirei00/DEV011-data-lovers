@@ -6,6 +6,193 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <h1>Pokemón</h1>
+    </header>
+
+    <main>
+      <h2>¿Qué pokemon te gustaría ver?</h2>
+      <div class = "baner">
+        <input type="search" name="busqueda" placeholder="Nombre, tipo, ataque...">
+        <div class="botonBuscador">  
+          <button type="button" name="borrar"> Borrar </button>
+          <button type="button" name="buscar"> Buscar </button>
+        </div>
+        <div class="botonVista">
+          <button type="button" name="vistaTarjeta"> Vista de tarjeta </button>
+          <button type="button" name="vistaLista"> Vista de lista </button>
+        </div>
+      </div>
+      <ul id="root">
+         
+       </ul>
+
+
+
+<!--<li class="tarjeta" type="none">
+          
+          <img id="imgPokemon" class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
+            <dl itemscope itemtype="pokemon">
+              <dt>Name:</dt><dd itemprop="name">pikachu</dd>
+              <dt>Number:</dt><dd itemprop="num">025</dd>
+              <dt>Rarity:</dt><dd itemprop="pokemon-rarity" name="tipoPokemon">normal</dd>
+            
+            </dl>
+        </li>
+        <li class="tarjeta">
+          
+          <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
+            <dl itemscope itemtype="pokemon">
+              <dt>Name:</dt><dd itemprop="name">pikachu</dd>
+              <dt>Number:</dt><dd itemprop="num">025</dd>
+              <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
+            
+            </dl>
+        </li> 
+        <li class="tarjeta">
+          
+          <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
+            <dl itemscope itemtype="pokemon">
+              <dt>Name:</dt><dd itemprop="name">pikachu</dd>
+              <dt>Number:</dt><dd itemprop="num">025</dd>
+              <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
+            
+            </dl>
+        </li>
+        <li class="tarjeta">
+          
+          <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
+            <dl itemscope itemtype="pokemon">
+              <dt>Name:</dt><dd itemprop="name">pikachu</dd>
+              <dt>Number:</dt><dd itemprop="num">025</dd>
+              <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
+            
+            </dl>
+        </li>
+      <li class="tarjeta" type="none">
+          
+        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
+          <dl itemscope itemtype="pokemon">
+            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
+            <dt>Number:</dt><dd itemprop="num">025</dd>
+            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">nor myjyj uyukiuk  uikuuu uuu uuu uuuuu uuuu uuuuuu uual</dd>
+          
+          </dl>
+      </li>
+      <li class="tarjeta">
+        
+        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
+          <dl itemscope itemtype="pokemon">
+            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
+            <dt>Number:</dt><dd itemprop="num">025</dd>
+            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
+          
+          </dl>
+      </li>
+      <li class="tarjeta">
+        
+        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
+          <dl itemscope itemtype="pokemon">
+            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
+            <dt>Number:</dt><dd itemprop="num">025</dd>
+            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
+          
+          </dl>
+      </li>
+      <li class="tarjeta">
+        
+        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
+          <dl itemscope itemtype="pokemon">
+            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
+            <dt>Number:</dt><dd itemprop="num">025</dd>
+            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
+          
+          </dl>
+      </li>
+      <li class="tarjeta">
+        
+        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
+          <dl itemscope itemtype="pokemon">
+            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
+            <dt>Number:</dt><dd itemprop="num">025</dd>
+            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
+          
+          </dl>
+      </li>      
+      <li class="tarjeta">
+        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
+          <dl itemscope itemtype="pokemon">
+            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
+            <dt>Number:</dt><dd itemprop="num">025</dd>
+            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
+          
+          </dl>
+      </li>      
+      <li class="tarjeta">
+        
+        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
+          <dl itemscope itemtype="pokemon">
+            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
+            <dt>Number:</dt><dd itemprop="num">025</dd>
+            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
+          
+          </dl>
+      </li>      
+      <li class="tarjeta">
+        
+        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
+          <dl itemscope itemtype="pokemon">
+            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
+            <dt>Number:</dt><dd itemprop="num">025</dd>
+            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
+          
+          </dl>
+      </li>      
+      <li class="tarjeta">
+        
+        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
+          <dl itemscope itemtype="pokemon">
+            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
+            <dt>Number:</dt><dd itemprop="num">025</dd>
+            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
+          
+          </dl>
+      </li>      <li class="tarjeta">
+        
+        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
+          <dl itemscope itemtype="pokemon">
+            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
+            <dt>Number:</dt><dd itemprop="num">025</dd>
+            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
+          
+          </dl>
+      </li>
+      
+      
+      
+      
+
+
+
+      
+      <div>
+        <dl itemscope itemtype="pokemon">
+          <div name="namePokemon">
+            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
+          </div>
+          <div>
+            <dt>Number:</dt><dd itemprop="num">025</dd>
+            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
+          </div>
+        </dl>
+      </div> -->
+    </main>
+
+    <footer>
+      <p>Karina Miranda Ruíz </br> México, 2023
+      </p>
+    </footer>
+
     <script src="main.js" type="module"></script>
   </body>
 </html>
