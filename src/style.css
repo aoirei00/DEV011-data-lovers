@@ -6,41 +6,188 @@ h2{
     text-align: center;
 }
 
-.baner{
+body{
+    background-color: #effff9;
+    font-size: 1.2rem;
+    font-family: cursive;
+}
+#name{
+    font-family: cursive;
+
+}
+
+.divColumna{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
     width: 70%;
-    row-gap: 10px;
+    gap: 10px;
+    padding: 20px;
+    border: 0px solid violet;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.divRenglon{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    gap: 10px;
+    background-color: #D7F0E6;
+    padding: 20px;
     border: 0px solid blue;
-    margin-left: auto;
-    margin-right:auto ;
 }
 
-.botonBuscador{
+.divRenglonSecundario{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    gap: 10px;
+    background-color: #D7F0E6;
+    padding: 20px;
     border: 0px solid red;
-    margin-left: auto;
-    margin-right: 0;
-    width: 12%;
 }
 
-.botonVista{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    border: 0px solid green;
-    width: 20%;
+.botonFiltro{
+    border-radius: 20px;
+    padding: 10px 10px;
+    font-size: 1.1rem;
+    font-family: cursive;
+}
+
+.botonGeneral{
+    background-color: #1D8696;
+    border:3px solid #176B78;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-family: cursive;
+    border-radius: 10px;
+}
+
+.water{
+    background-color: #71C3E4;
+    border: 3px solid #5894ac;
+}
+
+.fire{
+    background-color: #FFAD4C; 
+    border: 3px solid #cc8e41; 
+}
+
+.fight{
+    background-color: #E3454E;    
+    border: 3px solid #aa363c;    
+    color: #ffffff;
+}
+
+.bug{
+    background-color: #A9C732;
+    border: 3px solid #829927;
+}
+
+.grass{
+    background-color: #5AC37A;    
+    border: 3px solid #4a9b62;    
+    color: #ffffff;
+}
+
+.ground{
+    background-color: #D49768;    
+    border: 3px solid #a77854;    
+}
+
+.flying{
+    background-color: #A4BFED;    
+    border: 3px solid #8195b8;    
+}
+
+.fairy{
+    background-color: #F2A5E4;    
+    border: 3px solid #b87fad;    
+}
+
+.electric{
+    background-color: #F9E171;    
+    border: 3px solid #bdaa57;    
+}
+
+.normal{
+    background-color: #A7A69F;    
+    border: 3px solid #747470;    
+    color: #ffffff;
+}
+
+.poison{
+    background-color: #C760D5;    
+    border: 3px solid #91479b;    
+    color: #ffffff;
+}
+
+.ghost{
+    background-color: #7872D4;    
+    border: 3px solid #5b579e;
+    color: #ffffff;
+}
+
+.dark{
+    background-color: #6C7180;    
+    border: 3px solid #4e515a;    
+    color: #ffffff;
+}
+
+.ice{
+    background-color: #91DCD6;    
+    border: 3px solid #71a7a2;    
+}
+
+.psychic{
+    background-color: #FEA299;    
+    border: 3px solid #be7c76;    
+}
+
+
+.dragon{
+    background-color: #0581BC;    
+    border: 3px solid #046592;    
+    color: #ffffff;
+}
+
+.steel{
+    background-color: #56A8AA;    
+    border: 3px solid #428081;    
+    color: #ffffff;
+}
+
+.rock{
+    background-color: #D5CA92;    
+    border: 3px solid #b8af7f;    
+}
+
+.nolegendary{
+    background-color: #F5F5F5;    
+    border: 3px solid #E6E6E6;    
+}
+
+.legendary{
+    background-color: #333333;    
+    border: 3px solid #000000;    
+    color: #ffffff;
 }
 
 #root{
     width:97%;
-    border: 0px solid violet;
     margin-right: auto; /*Este y el siguiente, permiten centrar el objeto, no su contenido*/
     margin-left: auto;
     list-style-type: none;
@@ -56,10 +203,9 @@ h2{
     display: flex; /* permite que si contenido se muestre de forma flexible en una sola linea*/
     flex-wrap: wrap;
     flex-direction: column;
-    border: 0px solid black;
+    border: 10px solid #F6DA04;
     width: 300px;
     padding: 0.6rem;
-    background-color: aquamarine;
     border-radius: 10px;
     justify-content: space-evenly;
     align-items: center;
@@ -67,14 +213,12 @@ h2{
 
 .imgPokemon{
     width: 60%;
-    border: 0px solid red;
     background-color: white;
     border-radius: 10px;
 }
 
 dl{
     width: 85%;
-    border: 0px solid green;
     padding: 1rem;
     background-color: rgb(250, 227, 227);
     border-radius: 10px;

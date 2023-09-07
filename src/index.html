@@ -12,184 +12,60 @@
 
     <main>
       <h2>¿Qué pokemon te gustaría ver?</h2>
-      <div class = "baner">
-        <input type="search" name="busqueda" placeholder="Nombre, tipo, ataque...">
-        <div class="botonBuscador">  
-          <button type="button" name="borrar"> Borrar </button>
-          <button type="button" name="buscar"> Buscar </button>
+      <div class="divColumna">
+        <div class="divRenglon">
+          <button type="button"  class="botonFiltro water"> Agua </button>
+          <button type="button"  class="botonFiltro fire"> Fuego </button>
+          <button type="button"  class="botonFiltro fight"> Lucha </button>
+          <button type="button"  class="botonFiltro bug"> Bicho </button>
+          <button type="button"  class="botonFiltro grass"> Planta </button>
+          <button type="button"  class="botonFiltro ground"> Tierra </button>
+          <button type="button"  class="botonFiltro flying"> Volador </button>
+          <button type="button"  class="botonFiltro fairy"> Hada </button>
+          <button type="button"  class="botonFiltro electric"> Electrico </button>
+          <button type="button"  class="botonFiltro normal"> Normal </button>
+          <button type="button"  class="botonFiltro poison"> Veneno </button>
+          <button type="button"  class="botonFiltro ghost"> Fantasma </button>
+          <button type="button"  class="botonFiltro dark"> Siniestro </button>
+          <button type="button"  class="botonFiltro ice"> Hielo </button>
+          <button type="button"  class="botonFiltro psychic"> Psiquico </button>
+          <button type="button"  class="botonFiltro dragon"> Dragón </button>
+          <button type="button"  class="botonFiltro steel"> Acero </button>
+          <button type="button"  class="botonFiltro rock"> Roca </button>
         </div>
-        <div class="botonVista">
-          <button type="button" name="vistaTarjeta"> Vista de tarjeta </button>
-          <button type="button" name="vistaLista"> Vista de lista </button>
+        <div class="divRenglon">
+          <div class="divRenglonSecundario">
+            <button type="button"  class="botonFiltro nolegendary"> No legendario </button>
+            <button type="button"  class="botonFiltro legendary"> Legendario </button>
+          </div>
+          <div class="divRenglonSecundario">
+            <button type="button"  class="botonFiltro kanto"> Kanto </button>
+            <button type="button"  class="botonFiltro johto"> Johto </button>
+          </div>
+        </div>
+      </div>
+      <div class="divRenglonSecundario">
+        <button type="button" class="botonGeneral" id="cambioVista"> Cambio de vista </button>
+        <button type="button" class="botonGeneral" id="limpiarFiltro"> Limpiar filtros </button>
+        <div class="divColumna">
+          <label for="ordenName">Ordena pokemones</label>
+          <select name="ordenName" id="name">
+            <option value="AZ">Alfabéticamente A-Z</option>
+            <option value="ZA">Alfabéticamente Z-A</option>
+            <option value="generacion">Orden por generacion</option>
+            <option value="numero">Orden por número</option>
+          </select>
         </div>
       </div>
       <ul id="root">
          
-       </ul>
+      </ul>
 
 
-
-<!--<li class="tarjeta" type="none">
-          
-          <img id="imgPokemon" class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
-            <dl itemscope itemtype="pokemon">
-              <dt>Name:</dt><dd itemprop="name">pikachu</dd>
-              <dt>Number:</dt><dd itemprop="num">025</dd>
-              <dt>Rarity:</dt><dd itemprop="pokemon-rarity" name="tipoPokemon">normal</dd>
-            
-            </dl>
-        </li>
-        <li class="tarjeta">
-          
-          <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
-            <dl itemscope itemtype="pokemon">
-              <dt>Name:</dt><dd itemprop="name">pikachu</dd>
-              <dt>Number:</dt><dd itemprop="num">025</dd>
-              <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
-            
-            </dl>
-        </li> 
-        <li class="tarjeta">
-          
-          <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
-            <dl itemscope itemtype="pokemon">
-              <dt>Name:</dt><dd itemprop="name">pikachu</dd>
-              <dt>Number:</dt><dd itemprop="num">025</dd>
-              <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
-            
-            </dl>
-        </li>
-        <li class="tarjeta">
-          
-          <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
-            <dl itemscope itemtype="pokemon">
-              <dt>Name:</dt><dd itemprop="name">pikachu</dd>
-              <dt>Number:</dt><dd itemprop="num">025</dd>
-              <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
-            
-            </dl>
-        </li>
-      <li class="tarjeta" type="none">
-          
-        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
-          <dl itemscope itemtype="pokemon">
-            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
-            <dt>Number:</dt><dd itemprop="num">025</dd>
-            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">nor myjyj uyukiuk  uikuuu uuu uuu uuuuu uuuu uuuuuu uual</dd>
-          
-          </dl>
-      </li>
-      <li class="tarjeta">
-        
-        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
-          <dl itemscope itemtype="pokemon">
-            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
-            <dt>Number:</dt><dd itemprop="num">025</dd>
-            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
-          
-          </dl>
-      </li>
-      <li class="tarjeta">
-        
-        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
-          <dl itemscope itemtype="pokemon">
-            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
-            <dt>Number:</dt><dd itemprop="num">025</dd>
-            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
-          
-          </dl>
-      </li>
-      <li class="tarjeta">
-        
-        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
-          <dl itemscope itemtype="pokemon">
-            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
-            <dt>Number:</dt><dd itemprop="num">025</dd>
-            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
-          
-          </dl>
-      </li>
-      <li class="tarjeta">
-        
-        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
-          <dl itemscope itemtype="pokemon">
-            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
-            <dt>Number:</dt><dd itemprop="num">025</dd>
-            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
-          
-          </dl>
-      </li>      
-      <li class="tarjeta">
-        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
-          <dl itemscope itemtype="pokemon">
-            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
-            <dt>Number:</dt><dd itemprop="num">025</dd>
-            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
-          
-          </dl>
-      </li>      
-      <li class="tarjeta">
-        
-        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
-          <dl itemscope itemtype="pokemon">
-            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
-            <dt>Number:</dt><dd itemprop="num">025</dd>
-            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
-          
-          </dl>
-      </li>      
-      <li class="tarjeta">
-        
-        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
-          <dl itemscope itemtype="pokemon">
-            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
-            <dt>Number:</dt><dd itemprop="num">025</dd>
-            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
-          
-          </dl>
-      </li>      
-      <li class="tarjeta">
-        
-        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
-          <dl itemscope itemtype="pokemon">
-            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
-            <dt>Number:</dt><dd itemprop="num">025</dd>
-            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
-          
-          </dl>
-      </li>      <li class="tarjeta">
-        
-        <img class="imgPokemon" src = "https://www.serebii.net/pokemongo/pokemon/025.png"/>
-          <dl itemscope itemtype="pokemon">
-            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
-            <dt>Number:</dt><dd itemprop="num">025</dd>
-            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
-          
-          </dl>
-      </li>
-      
-      
-      
-      
-
-
-
-      
-      <div>
-        <dl itemscope itemtype="pokemon">
-          <div name="namePokemon">
-            <dt>Name:</dt><dd itemprop="name">pikachu</dd>
-          </div>
-          <div>
-            <dt>Number:</dt><dd itemprop="num">025</dd>
-            <dt>Rarity:</dt><dd itemprop="pokemon-rarity">normal</dd>
-          </div>
-        </dl>
-      </div> -->
     </main>
 
     <footer>
-      <p>Karina Miranda Ruíz </br> México, 2023
+      <p>Karina Miranda y Jasmin Beccerra</br> México, 2023
       </p>
     </footer>
 
