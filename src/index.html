@@ -1,11 +1,97 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Pokédex</h1>
+  </header>
+
+  <main>
+    <h2>¿Qué pokemon te gustaría ver?</h2>
+    <div class="divColumna">
+      <div class="divRenglon">
+        <button type="button" class="botonFiltro water" value="water"> <img src="IconosTipoPokemon/agua.png"
+            alt="x" />Agua </button>
+        <button type="button" class="botonFiltro fire" value="fire"><img src="IconosTipoPokemon/fuego.png"
+            alt="x" />Fuego </button>
+        <button type="button" class="botonFiltro fight" value="fight"><img src="IconosTipoPokemon/lucha.png"
+            alt="x" />Lucha </button>
+        <button type="button" class="botonFiltro bug" value="bug"><img src="IconosTipoPokemon/bicho.png" alt="x" />
+          Bicho </button>
+        <button type="button" class="botonFiltro grass" value="grass"> <img src="IconosTipoPokemon/planta.png"
+            alt="x" /> Planta </button>
+        <button type="button" class="botonFiltro ground" value="ground"><img src="IconosTipoPokemon/tierra.png"
+            alt="x" /> Tierra </button>
+        <button type="button" class="botonFiltro flying" value="flying"><img src="IconosTipoPokemon/volador.png"
+            alt="x" /> Volador </button>
+        <button type="button" class="botonFiltro fairy" value="fairy"><img src="IconosTipoPokemon/hada.png" alt="x" />
+          Hada </button>
+        <button type="button" class="botonFiltro electric" value="electric"><img src="IconosTipoPokemon/electrico.png"
+            alt="x" /> Electrico </button>
+        <button type="button" class="botonFiltro normal" value="normal"><img src="IconosTipoPokemon/normal.png"
+            alt="x" />Normal </button>
+        <button type="button" class="botonFiltro poison" value="poison"><img src="IconosTipoPokemon/veneno.png"
+            alt="x" /> Veneno </button>
+        <button type="button" class="botonFiltro ghost" value="ghost"> <img src="IconosTipoPokemon/fantasma.png"
+            alt="x" />Fantasma </button>
+        <button type="button" class="botonFiltro dark" value="dark"><img src="IconosTipoPokemon/siniestro.png"
+            alt="x" /> Siniestro </button>
+        <button type="button" class="botonFiltro ice" value="ice"><img src="IconosTipoPokemon/hielo.png" alt="x" />
+          Hielo </button>
+        <button type="button" class="botonFiltro psychic" value="psychic"> <img src="IconosTipoPokemon/psiquico.png"
+            alt="x" />Psiquico </button>
+        <button type="button" class="botonFiltro dragon" value="dragon"><img src="IconosTipoPokemon/dragon.png"
+            alt="x" /> Dragón </button>
+        <button type="button" class="botonFiltro steel" value="steel"><img src="IconosTipoPokemon/acero.png" alt="x" />
+          Acero </button>
+        <button type="button" class="botonFiltro rock" value="rock"><img src="IconosTipoPokemon/roca.png" alt="x" />
+          Roca </button>
+      </div>
+      <div class="divRenglon">
+        <div class="divRenglonSecundario">
+          <button type="button" class="botonFiltro nolegendary" value="mythic"><img
+              src="IconosTipoPokemon/legendarios.png" alt="x" />Mitico </button>
+          <button type="button" class="botonFiltro legendary" value="legendary"><img
+              src="IconosTipoPokemon/legendarios.png" alt="x" /> Legendario </button>
+        </div>
+        <div class="divRenglonSecundario">
+          <button type="button" class="botonFiltro kanto" value="kanto"> Kanto </button>
+          <button type="button" class="botonFiltro johto" value="johto"> Johto </button>
+        </div>
+      </div>
+    </div>
+    <div class="divRenglon">
+      <button type="button" class="botonGeneral" id="cambioVista"> Cambio de vista </button>
+      <button type="button" class="botonGeneral" id="limpiarFiltro"> Limpiar filtros </button>
+      <div class="divColumna">
+        <label for="ordenName">Ordena pokemones</label>
+        <select name="ordenName" id="name">
+          <option value="name" sortOrder="asc">Alfabéticamente A-Z</option>
+          <option value="name" sortOrder="desc">Alfabéticamente Z-A</option>
+          <option value="num-asc">Orden Asc por número</option>
+          <option value="num-desc">Orden Desc por número</option>
+        </select>
+      </div>
+    </div>
+    <ul id="root">
+
+    </ul>
+
+
+  </main>
+
+  <footer>
+    <p>Karina Miranda y Jasmin Beccerra</br> México, 2023
+    </p>
+  </footer>
+
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>

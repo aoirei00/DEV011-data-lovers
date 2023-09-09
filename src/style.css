@@ -1,0 +1,333 @@
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+body{
+    background-color: #effff9;
+    font-size: 1.1rem;
+    font-family: cursive;
+    padding-right: 5%;
+}
+#name{
+    font-family: cursive;
+
+}
+
+.divColumna{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    gap: 10px;
+    padding: 20px;
+    border: 3px solid violet;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.divRenglon{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    gap: 3px;
+    padding: 5px;
+    border: 3px solid blue;
+}
+
+.divRenglonSecundario{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    gap: 10px;
+    background-color: #D7F0E6;
+    padding: 20px;
+    border: 3px solid red;
+}
+
+.botonFiltro{
+    border-radius: 20px;
+    padding: 5px 5px;
+    font-size: 1.1rem;
+    font-family: cursive;
+}
+
+.botonFiltro img{
+    margin-left: 10px; /* Espacio entre el texto y el icono */
+    width: 20px; /* Ancho del icono, ajusta según el tamaño de tu icono */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+.botonGeneral{
+    background-color: #1D8696;
+    border:3px solid #176B78;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-family: cursive;
+    border-radius: 10px;
+    height: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.water{
+    background-color: #71C3E4;
+    border: 3px solid #5894ac;
+    padding-right:30px;
+    width:160px;
+    
+
+}
+
+
+
+.fire{
+    background-color: #FFAD4C; 
+    border: 3px solid #cc8e41; 
+    padding-right:30px;
+    width:160px;
+}
+
+
+
+.fight{
+    background-color: #E3454E;    
+    border: 3px solid #aa363c;    
+    color: #ffffff;
+    padding-right:30px;
+    width:160px;
+    
+}
+
+
+.bug{
+    background-color: #A9C732;
+    border: 3px solid #829927;
+    padding-right:30px;
+    width:160px;
+    
+}
+
+.grass{
+    background-color: #5AC37A;    
+    border: 3px solid #4a9b62;    
+    color: #ffffff;
+    padding-right:30px;
+    width:160px;
+    
+}
+
+
+
+.ground{
+    background-color: #D49768;    
+    border: 3px solid #a77854;    
+    padding-right:30px;
+    width:160px;
+    
+}
+
+
+
+.flying{
+    background-color: #A4BFED;    
+    border: 3px solid #8195b8; 
+    padding-right:30px;
+    width:160px;
+    
+}
+
+
+.fairy{
+    background-color: #F2A5E4;    
+    border: 3px solid #b87fad;
+    padding-right:30px;
+    width:160px;
+}
+
+
+
+.electric{
+    background-color: #F9E171;    
+    border: 3px solid #bdaa57; 
+    padding-right:30px;
+    width:160px;
+     
+}
+
+
+
+.normal{
+    background-color: #A7A69F;    
+    border: 3px solid #747470;    
+    color: #ffffff;
+    padding-right:30px;
+    width:160px;
+ 
+}
+
+
+.poison{
+    background-color: #C760D5;    
+    border: 3px solid #91479b;    
+    color: #ffffff;
+    padding-right:30px;
+    width:160px;
+     
+}
+
+
+
+.ghost{
+    background-color: #7872D4;    
+    border: 3px solid #5b579e;
+    color: #ffffff;
+    padding-right:30px;
+    width:160px;
+     
+}
+
+
+
+.dark{
+    background-color: #6C7180;    
+    border: 3px solid #4e515a;    
+    color: #ffffff;
+    padding-right:30px;
+    width:160px;
+     
+}
+
+
+
+.ice{
+    background-color: #91DCD6;    
+    border: 3px solid #71a7a2;
+    padding-right:30px;
+    width:160px;
+         
+}
+
+
+
+
+.psychic{
+    background-color: #FEA299;    
+    border: 3px solid #be7c76;
+    padding-right:30px;
+    width:160px;
+         
+}
+
+
+
+.dragon{
+    background-color: #0581BC;    
+    border: 3px solid #046592;    
+    color: #ffffff;
+    padding-right:30px;
+    width:160px;
+     
+}
+
+
+
+.steel{
+    background-color: #56A8AA;    
+    border: 3px solid #428081;    
+    color: #ffffff;
+    padding-right:30px;
+    width:160px;
+     
+}
+
+
+
+.rock{
+    background-color: #D5CA92;    
+    border: 3px solid #b8af7f; 
+    padding-right:30px;
+    width:160px;
+        
+}
+
+
+
+.nolegendary{
+    background-color: #F5F5F5;    
+    border: 3px solid #E6E6E6;    
+}
+
+
+
+.legendary{
+    background-color: #333333;    
+    border: 3px solid #000000;    
+    color: #ffffff;
+}
+
+
+
+#root{
+    width:97%;
+    margin-right: auto; /*Este y el siguiente, permiten centrar el objeto, no su contenido*/
+    margin-left: auto;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    row-gap: 20px;
+}
+
+.tarjeta{
+    display: flex; /* permite que si contenido se muestre de forma flexible en una sola linea*/
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 10px solid #F6DA04;
+    width: 300px;
+    padding: 0.6rem;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.imgPokemon{
+    width: 40%;
+    background-color: none;
+    border-radius: 10px;
+}
+
+dl{
+    width: 85%;
+    padding: 1rem;
+    background-color: rgb(250, 227, 227);
+    border-radius: 10px;
+    margin-bottom: auto;
+}
+
+dl dt{
+    background-color: none;
+    font-weight: 600;
+}
+
+dl dd{
+    background-color: rgb(255, 248, 251);
+    padding: 5px;
+}
