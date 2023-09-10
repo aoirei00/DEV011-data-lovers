@@ -72,6 +72,15 @@ body{
     height: auto; /* Altura automática para mantener la proporción */
 }
 
+.botonFiltrowater{
+    width: 150px; /* Ancho del botón */
+    height: 50px; /* Altura del botón */
+    border: none; /* Elimina el borde del botón */
+    background-image: url('src/IconosTipoPokemon/agua.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    text-indent: -9999px; /* Oculta el texto del botón (opcional) */
+    cursor: pointer; 
+}
 .botonGeneral{
     background-color: #1D8696;
     border:3px solid #176B78;
@@ -104,6 +113,15 @@ body{
 }
 
 
+
+.fighting{
+    background-color: #E3454E;    
+    border: 3px solid #aa363c;    
+    color: #ffffff;
+    padding-right:30px;
+    width:160px;
+    
+}
 
 .fight{
     background-color: #E3454E;    
@@ -331,3 +349,4 @@ dl dd{
     background-color: rgb(255, 248, 251);
     padding: 5px;
 }
+

@@ -57,7 +57,7 @@ buttonFilterFire.addEventListener("click",function(){
 
 buttonFilterFight.addEventListener("click",function(){
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "type", (buttonFilterFight.value));
+    pokemones = filterData(pokemones, "type", (buttonFilterFight.value, "fighting"));
     viewData.namesPokeMap(pokemones,ulContentCards);
 }); 
 
