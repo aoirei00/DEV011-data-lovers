@@ -8,76 +8,89 @@
 </head>
 
 <body>
-  <header>
+  <header id="header" class="encabezado">
     <h1>Pokédex</h1>
   </header>
 
   <main>
     <h2>¿Qué pokemon te gustaría ver?</h2>
     <div class="divColumna">
-      <div class="divRenglon">
-        <button type="button" class="botonFiltroType" value="water" title="Agua"> <!-- <img src="IconosTipoPokemon/agua.png"
-            alt="x" /> Agua --></button>
-        <button type="button" class="botonFiltroType" value="fire" title="Fuego"><!-- <img src="IconosTipoPokemon/fuego.png"
-            alt="x" />Fuego  --></button>
-        <button type="button" class="botonFiltroType" value="fight" title="Lucha"><!-- <img src="IconosTipoPokemon/lucha.png"
-            alt="x" />Lucha  --></button>
-        <button type="button" class="botonFiltroType" value="bug" title="Bicho"><!-- <img src="IconosTipoPokemon/bicho.png" alt="x" />
-          Bicho  --></button>
-        <button type="button" class="botonFiltroType" value="grass" title="Planta"><!--  <img src="IconosTipoPokemon/planta.png"
-            alt="x" /> Planta  --></button>
-        <button type="button" class="botonFiltroType" value="ground" title="Tierra"><!-- <img src="IconosTipoPokemon/tierra.png"
-            alt="x" /> Tierra  --></button>
-        <button type="button" class="botonFiltroType" value="flying" title="Volador"><!-- <img src="IconosTipoPokemon/volador.png"
-            alt="x" />  Volador --></button>
-        <button type="button" class="botonFiltroType" value="fairy" title="Hada"><!-- <img src="IconosTipoPokemon/hada.png" alt="x" />
-          Hada  --></button>
-        <button type="button" class="botonFiltroType" value="electric" title="Electrico"><!-- <img src="IconosTipoPokemon/electrico.png"
-            alt="x" /> Electrico  --></button>
-        <button type="button" class="botonFiltroType" value="normal" title="Normal"><!-- <img src="IconosTipoPokemon/normal.png"
-            alt="x" />Normal  --></button>
-        <button type="button" class="botonFiltroType" value="poison" title="Veneno"><!-- <img src="IconosTipoPokemon/veneno.png"
-            alt="x" /> Veneno  --></button>
-        <button type="button" class="botonFiltroType" value="ghost" title="Fantasma"><!--  <img src="IconosTipoPokemon/fantasma.png"
-            alt="x" />Fantasma  --></button>
-        <button type="button" class="botonFiltroType" value="dark" title="Siniestro"><!-- <img src="IconosTipoPokemon/siniestro.png"
-            alt="x" /> Siniestro  --></button>
-        <button type="button" class="botonFiltroType" value="ice" title="Hielo"><!-- <img src="IconosTipoPokemon/hielo.png" alt="x" />
-          Hielo  --></button>
-        <button type="button" class="botonFiltroType" value="psychic" title="Psíquico"><!--  <img src="IconosTipoPokemon/psiquico.png"
-            alt="x" />Psiquico  --></button>
-        <button type="button" class="botonFiltroType" value="dragon" title="Dragón"><!-- <img src="IconosTipoPokemon/dragon.png"
-            alt="x" /> Dragón  --></button>
-        <button type="button" class="botonFiltroType" value="steel" title="Acero"><!-- <img src="IconosTipoPokemon/acero.png" alt="x" />
-          Acero  --></button>
-        <button type="button" class="botonFiltroType" value="rock" title="Roca"><!-- <img src="IconosTipoPokemon/roca.png" alt="x" />
-          Roca  --></button>
+      <div class="divColumna">
+        <label for="filtroType">Filtra los pokemones por tipo</label>
+        <div class="divRenglon">
+          <button type="button" class="botonFiltroType" value="water" title="Agua" id="filtroType"> <!-- <img src="IconosTipoPokemon/agua.png"
+              alt="x" /> Agua --></button>
+          <button type="button" class="botonFiltroType" value="fire" title="Fuego"><!-- <img src="IconosTipoPokemon/fuego.png"
+              alt="x" />Fuego  --></button>
+          <button type="button" class="botonFiltroType" value="fight" title="Lucha"><!-- <img src="IconosTipoPokemon/lucha.png"
+              alt="x" />Lucha  --></button>
+          <button type="button" class="botonFiltroType" value="bug" title="Bicho"><!-- <img src="IconosTipoPokemon/bicho.png" alt="x" />
+            Bicho  --></button>
+          <button type="button" class="botonFiltroType" value="grass" title="Planta"><!--  <img src="IconosTipoPokemon/planta.png"
+              alt="x" /> Planta  --></button>
+          <button type="button" class="botonFiltroType" value="ground" title="Tierra"><!-- <img src="IconosTipoPokemon/tierra.png"
+              alt="x" /> Tierra  --></button>
+          <button type="button" class="botonFiltroType" value="flying" title="Volador"><!-- <img src="IconosTipoPokemon/volador.png"
+              alt="x" />  Volador --></button>
+          <button type="button" class="botonFiltroType" value="fairy" title="Hada"><!-- <img src="IconosTipoPokemon/hada.png" alt="x" />
+            Hada  --></button>
+          <button type="button" class="botonFiltroType" value="electric" title="Electrico"><!-- <img src="IconosTipoPokemon/electrico.png"
+              alt="x" /> Electrico  --></button>
+          <button type="button" class="botonFiltroType" value="normal" title="Normal"><!-- <img src="IconosTipoPokemon/normal.png"
+              alt="x" />Normal  --></button>
+          <button type="button" class="botonFiltroType" value="poison" title="Veneno"><!-- <img src="IconosTipoPokemon/veneno.png"
+              alt="x" /> Veneno  --></button>
+          <button type="button" class="botonFiltroType" value="ghost" title="Fantasma"><!--  <img src="IconosTipoPokemon/fantasma.png"
+              alt="x" />Fantasma  --></button>
+          <button type="button" class="botonFiltroType" value="dark" title="Siniestro"><!-- <img src="IconosTipoPokemon/siniestro.png"
+              alt="x" /> Siniestro  --></button>
+          <button type="button" class="botonFiltroType" value="ice" title="Hielo"><!-- <img src="IconosTipoPokemon/hielo.png" alt="x" />
+            Hielo  --></button>
+          <button type="button" class="botonFiltroType" value="psychic" title="Psíquico"><!--  <img src="IconosTipoPokemon/psiquico.png"
+              alt="x" />Psiquico  --></button>
+          <button type="button" class="botonFiltroType" value="dragon" title="Dragón"><!-- <img src="IconosTipoPokemon/dragon.png"
+              alt="x" /> Dragón  --></button>
+          <button type="button" class="botonFiltroType" value="steel" title="Acero"><!-- <img src="IconosTipoPokemon/acero.png" alt="x" />
+            Acero  --></button>
+          <button type="button" class="botonFiltroType" value="rock" title="Roca"><!-- <img src="IconosTipoPokemon/roca.png" alt="x" />
+            Roca  --></button>
+        </div>
       </div>
       <div class="divRenglon">
-        <div class="divRenglonSecundario">
-          <button type="button" class="botonFiltroType" value="mythic" title="Mítico"><!-- <img src="IconosTipoPokemon/legendarios.png" alt="x" />
-            Mitico  --></button>
-          <button type="button" class="botonFiltroType" value="legendary" title="Legendario"><!-- <img src="IconosTipoPokemon/legendarios.png" alt="x" /> 
-            Legendario  --></button>
+        <div class="divColumnaSecundario">
+          <label for="filtroRareza">Filtra los pokemones por rareza</label>
+          <div class="divRenglonSecundario">
+            <button type="button" class="botonFiltroType" value="mythic" title="Mítico" id="filtroRareza"><!-- <img src="IconosTipoPokemon/legendarios.png" alt="x" />
+              Mitico  --></button>
+            <button type="button" class="botonFiltroType" value="legendary" title="Legendario"><!-- <img src="IconosTipoPokemon/legendarios.png" alt="x" /> 
+              Legendario  --></button>
+          </div>
         </div>
-        <div class="divRenglonSecundario">
-          <button type="button" class="botonFiltroType" value="kanto" title="Kanto"></button>
-          <button type="button" class="botonFiltroType" value="johto" title="Johto"></button>
+        <div class="divColumnaSecundario">
+          <label for="filtroRegion">Filtra los pokemones por región</label>
+          <div class="divRenglonSecundario">
+            <button type="button" class="botonFiltroType" value="kanto" title="Kanto" id="filtroRegion"></button>
+            <button type="button" class="botonFiltroType" value="johto" title="Johto"></button>
+          </div>
         </div>
       </div>
     </div>
     <div class="divRenglon">
-      <button type="button" class="botonGeneral" id="cambioVista"> Cambio de vista </button>
-      <button type="button" class="botonGeneral" id="limpiarFiltro" data-testid="button-clear"> Limpiar filtros </button>
-      <div class="divColumna">
+      <div class="divColumnaSecundario">
+        <button type="button" class="botonGeneral" id="cambioVista"> Cambio de vista </button>
+        <button type="button" class="botonGeneral" id="limpiarFiltro" data-testid="button-clear"> Limpiar filtros </button>
+      </div>
+      <div class="divColumnaSecundario">
         <label for="name">Ordena los pokemones por nombre</label>
-        <select name="name" id="name" data-testid="select-sort">
+        <select name="name" id="name" data-testid="select-sort" autocomplete="off"> <!-- carca un error en el navegador web, por eso se puso autocomplete=off, pero no se sabe el motivo -->
           <option hidden selected value="default">Selecciona una opción...</option>
           <option value="asc">Ascendente (A-Z)</option>
           <option value="desc">Descendente (Z-A)</option>
         </select>
+      </div>
+      <div class="divColumnaSecundario">
         <label for="num">Ordena los pokemones por número</label>
-        <select name="num" id="num" data-testid="select-sort">
+        <select name="num" id="num" data-testid="select-sort-num">
           <option hidden selected value="default">Selecciona una opción...</option>
           <option value="asc">Ascendente (1,2,3...)</option>
           <option value="desc">Descendente (...3,2,1)</option>
@@ -85,15 +98,22 @@
       </div>
     </div>
     
-    <ul id="root">
+   <!--  <div class="divRenglon" id="filtrosAplicados">
 
-    </ul>
 
+    </div>
+ -->
+
+    <div id="root">
+      <ul>
+      </ul>
+
+    </div>
 
   </main>
 
   <footer>
-    <p>Karina Miranda y Jasmin Becerra</br> México, 2023
+    <p>Karina Miranda y Jasmin Becerra<br/> México, 2023
     </p>
   </footer>
 
