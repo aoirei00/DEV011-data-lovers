@@ -27,7 +27,7 @@ footer{
     text-align: right;
 }
 
-#name{
+#name, #num{
     font-family: cursive;
     width: 50%;
 }
@@ -105,7 +105,7 @@ footer{
 }
 
 .botonFiltroType{
-    border-radius: 32.5px;
+    border-radius: 30px;
     width: 60px;  /*Ancho del icono, ajusta según el tamaño de tu icono */
     height: 60px;  /*Altura automática para mantener la proporción */
     border: none; /* Elimina el borde del botón */

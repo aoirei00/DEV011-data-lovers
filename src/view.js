@@ -33,15 +33,19 @@ renderItemsType: (data,bestAtackType) => {
 
   // Crear elementos <dt> y <dd> para los mejores y peores ataques
   const dtBestAttack = document.createElement("dt");
-  const dtBestWorst = document.createElement("dt");
+  const dtWorstAttack = document.createElement("dt");
+
   const ddBestAttack = document.createElement("dd");
-  const ddBestWorst = document.createElement("dd");
+  const ddWorstAttack = document.createElement("dd");
+
   dtBestAttack.textContent = "Mejor ataque tipo "+ bestAtackType.best.type;
-  dtBestWorst.textContent = "Peor ataque tipo "+ bestAtackType.worst.type;
+  dtWorstAttack.textContent = "Peor ataque tipo "+ bestAtackType.worst.type;
+
   ddBestAttack.setAttribute("itemprop", "ataque");
-  ddBestWorst.setAttribute("itemprop", "ataque");
+  ddWorstAttack.setAttribute("itemprop", "ataque");
+  
   ddBestAttack.textContent = bestAtackType.best.name + " (Daño:"+bestAtackType.best['base-damage']+")";
-  ddBestWorst.textContent = bestAtackType.worst.name + " (Daño:"+bestAtackType.worst['base-damage']+")";
+  ddWorstAttack.textContent = bestAtackType.worst.name + " (Daño:"+bestAtackType.worst['base-damage']+")";
 
   // Agregar la imagen y el elemento dl a la tarjeta
   liElementCard.appendChild(imgElementCard);
@@ -54,8 +58,8 @@ renderItemsType: (data,bestAtackType) => {
   dlElementCard.appendChild(ddDescripcionCard);
   dlElementCard.appendChild(dtBestAttack);
   dlElementCard.appendChild(ddBestAttack);
-  dlElementCard.appendChild(dtBestWorst);
-  dlElementCard.appendChild(ddBestWorst);
+  dlElementCard.appendChild(dtWorstAttack);
+  dlElementCard.appendChild(ddWorstAttack);
 
   return liElementCard;
 },

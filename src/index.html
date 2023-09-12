@@ -68,18 +68,23 @@
     </div>
     <div class="divRenglon">
       <button type="button" class="botonGeneral" id="cambioVista"> Cambio de vista </button>
-      <button type="button" class="botonGeneral" id="limpiarFiltro"> Limpiar filtros </button>
+      <button type="button" class="botonGeneral" id="limpiarFiltro" data-testid="button-clear"> Limpiar filtros </button>
       <div class="divColumna">
-        <label for="name">Ordena pokemones</label>
-        <select name="ordenName" id="name">
-          <option hidden selected>Selecciona una opción...</option>
-          <option value="name" id="asc">Alfabéticamente A-Z</option>
-          <option value="name" id="desc">Alfabéticamente Z-A</option>
-          <option value="num" id="asc">Orden Asc por número</option>
-          <option value="num" id="desc">Orden Desc por número</option>
+        <label for="name">Ordena los pokemones por nombre</label>
+        <select name="name" id="name" data-testid="select-sort">
+          <option hidden selected value="default">Selecciona una opción...</option>
+          <option value="asc">Ascendente (A-Z)</option>
+          <option value="desc">Descendente (Z-A)</option>
+        </select>
+        <label for="num">Ordena los pokemones por número</label>
+        <select name="num" id="num" data-testid="select-sort">
+          <option hidden selected value="default">Selecciona una opción...</option>
+          <option value="asc">Ascendente (1,2,3...)</option>
+          <option value="desc">Descendente (...3,2,1)</option>
         </select>
       </div>
     </div>
+    
     <ul id="root">
 
     </ul>

@@ -8,17 +8,17 @@ export const filterData = (data, filterBy, value) =>{
     return data.filter(element => element[filterBy]["name"].includes(value))
   };
   
-  export const filterDataTypeAttack = (data, value) =>{
+/*   export const filterDataTypeAttack = (data, value) =>{
     return data.filter(element => {
       let aux;
       for (let i=0; i<element['quick-move'].length; i++){
-        aux = element['quick-move'][i]['type'].includes(value)
+        aux = element['quick-move'][i]['type'].includes(value);
       }
       return aux;
     })
-  };
+  }; */
   
-  export const sortData = (data, sortBy='asc', sortOrder) => {
+  export const sortData = (data, sortBy, sortOrder='asc') => {
     if (sortOrder === 'asc') {
       return data.sort((a, b) => a[sortBy].localeCompare(b[sortBy]));
     } else if (sortOrder === 'desc') {
