@@ -27,9 +27,9 @@ footer{
     text-align: right;
 }
 
-#name, #num{
+select {
     font-family: cursive;
-    width: 50%;
+    width: 40%;
 }
 
 .divColumna{
@@ -44,6 +44,20 @@ footer{
     padding: 10px;
     border: 0px solid violet;
     margin-bottom: 10px;
+    align-items: center;
+}
+
+.divColumnaSecundario{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    gap: 10px;
+    padding: 10px;
+    border: 0px solid green;
     align-items: center;
 }
 
@@ -165,6 +179,14 @@ dl dt{
 dl dd{
     background-color: rgb(255, 248, 251);
     padding: 5px;
+}
+
+select#type{
+    text-wrap: nowrap;
+}
+select#type option[value="water"] {
+    background-image: url('IconosTipoPokemon/agua.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */    
 }
 
 button[value="water"]{
