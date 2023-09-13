@@ -1,0 +1,397 @@
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+body{
+    background-color: #effff9;
+    font-size: 1.1rem;
+    font-family: cursive;
+}
+
+header {
+/*     background-color: white;
+    border-bottom: 3px solid #5AC37A; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer{
+/*     background-color: white;
+    border-top: 3px solid #5AC37A; */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+}
+
+select {
+    font-family: cursive;
+    width: 40%;
+}
+
+.divColumna{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    gap: 10px;
+    padding: 10px;
+    border: 0px solid violet;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.divColumnaSecundario{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    gap: 10px;
+    padding: 10px;
+    border: 0px solid green;
+    align-items: center;
+}
+
+.divRenglon{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    gap: 10px;
+    padding: 5px;
+    border: 0px solid blue;
+    background-color: #e3f7ef;
+}
+
+.divRenglonSecundario{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    gap: 10px;
+    background-color: #ceece0;
+    padding: 5px;
+    border: 0px solid red;
+}
+
+/* .botonFiltro{
+    border-radius: 20px;
+    padding: 5px 5px;
+    font-size: 1.1rem;
+    font-family: cursive;
+    width: 40px;  /*Ancho del icono, ajusta según el tamaño de tu icono 
+    height: 40px;  /*Altura automática para mantener la proporción 
+} */
+
+/* .botonFiltro img{
+    margin-left: 10px;  Espacio entre el texto y el icono 
+    width: 20px;  Ancho del icono, ajusta según el tamaño de tu icono 
+    height: 20px;  Altura automática para mantener la proporción 
+ }
+ */
+
+ .botonGeneral{
+    background-color: #1D8696;
+    border:3px solid #176B78;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-family: cursive;
+    border-radius: 10px;
+    height: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.botonFiltroType{
+    border-radius: 30px;
+    width: 60px;  /*Ancho del icono, ajusta según el tamaño de tu icono */
+    height: 60px;  /*Altura automática para mantener la proporción */
+    border: none; /* Elimina el borde del botón */
+    cursor: pointer; 
+    /*text-indent: -9999px;  Oculta el texto del botón (opcional) */
+}
+.botonFiltroType:hover{
+    border: 3px solid #F6DA04;
+}
+
+
+#root{
+    width:97%;
+    margin-right: auto; /*Este y el siguiente, permiten centrar el objeto, no su contenido*/
+    margin-left: auto;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    row-gap: 20px;
+    border-color: 3px solid #1D8696;
+}
+
+.tarjeta{
+    display: flex; /* permite que si contenido se muestre de forma flexible en una sola linea*/
+    flex-wrap: wrap;
+    flex-direction: column;
+    /*border: 10px solid #F6DA04;    este no lo ejecuta porque tiene deblarado borde en los typos de pokemon*/  
+    width: 300px;
+    padding: 0.6rem;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.imgPokemon{
+    width: 40%;
+    background-color: none;
+    border-radius: 10px;
+}
+
+dl{
+    width: 85%;
+    padding: 1rem;
+    background-color: rgb(250, 227, 227);
+    border-radius: 10px;
+    margin-bottom: auto;
+}
+
+dl dt{
+    background-color: none;
+    font-weight: 600;
+}
+
+dl dd{
+    background-color: rgb(255, 248, 251);
+    padding: 5px;
+}
+
+select#type{
+    text-wrap: nowrap;
+}
+select#type option[value="water"] {
+    background-image: url('IconosTipoPokemon/agua.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */    
+}
+
+button[value="water"]{
+    background-image: url('IconosTipoPokemon/agua.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="fire"]{
+    background-image: url('IconosTipoPokemon/fuego.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="fight"]{
+    background-image: url('IconosTipoPokemon/lucha.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="bug"]{
+    background-image: url('IconosTipoPokemon/bicho.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="grass"]{
+    background-image: url('IconosTipoPokemon/planta.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="ground"]{
+    background-image: url('IconosTipoPokemon/tierra.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="flying"]{
+    background-image: url('IconosTipoPokemon/volador.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="fairy"]{
+    background-image: url('IconosTipoPokemon/hada.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="electric"]{
+    background-image: url('IconosTipoPokemon/electrico.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="normal"]{
+    background-image: url('IconosTipoPokemon/normal.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="poison"]{
+    background-image: url('IconosTipoPokemon/veneno.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="ghost"]{
+    background-image: url('IconosTipoPokemon/fantasma.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="dark"]{
+    background-image: url('IconosTipoPokemon/siniestro.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="ice"]{
+    background-image: url('IconosTipoPokemon/hielo.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="psychic"]{
+    background-image: url('IconosTipoPokemon/psiquico.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="dragon"]{
+    background-image: url('IconosTipoPokemon/dragon.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="steel"]{
+    background-image: url('IconosTipoPokemon/acero.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="rock"]{
+    background-image: url('IconosTipoPokemon/roca.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="mythic"]{
+    background-image: url('IconosTipoPokemon/mitico.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="legendary"]{
+    background-image: url('IconosTipoPokemon/legendario.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+}
+button[value="kanto"]{
+    background-image: url('IconosTipoPokemon/kanto.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    border: 1px solid #5498C0;
+}
+button[value="johto"]{
+    background-image: url('IconosTipoPokemon/johto.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    border: 1px solid #5498C0;
+}
+
+.water{
+    background-color: #71C3E4;
+    border: 3px solid #5894ac;
+}
+
+.fire{
+    background-color: #FFAD4C; 
+    border: 3px solid #cc8e41; 
+}
+
+.fighting{
+    background-color: #E3454E;    
+    border: 3px solid #aa363c;    
+    /* color: #ffffff; */
+}
+
+.fight{
+    background-color: #E3454E;    
+    border: 3px solid #aa363c;    
+    /* color: #ffffff; */
+}
+
+.bug{
+    background-color: #A9C732;
+    border: 3px solid #829927;
+}
+
+.grass{
+    background-color: #5AC37A;    
+    border: 3px solid #4a9b62;    
+    /* color: #ffffff; */
+}
+
+.ground{
+    background-color: #D49768;    
+    border: 3px solid #a77854;    
+}
+
+.flying{
+    background-color: #A4BFED;    
+    border: 3px solid #8195b8; 
+}
+
+.fairy{
+    background-color: #F2A5E4;    
+    border: 3px solid #b87fad;
+}
+
+.electric{
+    background-color: #F9E171;    
+    border: 3px solid #bdaa57; 
+}
+
+.normal{
+    background-color: #A7A69F;    
+    border: 3px solid #747470;    
+    /* color: #ffffff; */
+}
+
+.poison{
+    background-color: #C760D5;    
+    border: 3px solid #91479b;    
+    /* color: #ffffff; */
+}
+
+.ghost{
+    background-color: #7872D4;    
+    border: 3px solid #5b579e;
+    /* color: #ffffff; */
+}
+
+.dark{
+    background-color: #6C7180;    
+    border: 3px solid #4e515a;    
+    /* color: #ffffff; */
+}
+
+.ice{
+    background-color: #91DCD6;    
+    border: 3px solid #71a7a2;
+}
+
+.psychic{
+    background-color: #FEA299;    
+    border: 3px solid #be7c76;
+}
+
+.dragon{
+    background-color: #0581BC;    
+    border: 3px solid #046592;    
+    /* color: #ffffff; */
+}
+
+.steel{
+    background-color: #56A8AA;    
+    border: 3px solid #428081;    
+    /* color: #ffffff; */
+}
+
+.rock{
+    background-color: #D5CA92;    
+    border: 3px solid #b8af7f; 
+    padding-right:30px;
+}
+
+.nolegendary{
+    background-color: #F5F5F5;    
+    border: 3px solid #E6E6E6;    
+}
+
+.legendary{
+    background-color: #333333;    
+    border: 3px solid #000000;    
+    /* color: #ffffff; */
+}
