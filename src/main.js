@@ -1,8 +1,9 @@
-import {filterData,sortData, getPropertyValue } from './dataFunctions.js';
+import {filterData,filterDataGeneration,computeStats,sortData} from './dataFunctions.js';
 import data from './data/pokemon/pokemon.js';
 import viewData from './view.js';
 
 let pokemones = data.pokemon
+
 
 // Botones para filtrar por typo de pokemon
 const buttonFilterWater = document.querySelector('button[value="water"]');
@@ -33,161 +34,404 @@ const buttonFilterKanto = document.querySelector('button[value="kanto"]');
 const buttonFilterJohto = document.querySelector('button[value="johto"]');
 
 //Botones generales para cambio de vista y limpieza del filtro
-const buttonChangeView = document.querySelector('button[id="cambioVista"]');
+//const buttonChangeView = document.querySelector('button[id="cambioVista"]');
 const buttonCleanFilter = document.querySelector('button[id="limpiarFiltro"]');
 
 //Lista para ordedar las tarjetas
-const selectElement = document.querySelector('select[name="ordenName"]');
+const selectElementName = document.getElementById("name");
+const selectElementNum = document.getElementById("num");
 
+//Selector de tarjetas ul
 const ulContentCards = document.getElementById("root");
 
+//Funcion de reinicio de parámetros
+function reinicioParametros(){
+  pokemones = data.pokemon;
+  bestAtack = '';
+  ulContentCards.innerHTML = '';
+  selectElementNum.value="default";
+  selectElementName.value="default";
+  buttonFilterWater.style.border = "0px";
+  buttonFilterFire.style.border = "0px";
+  buttonFilterFight.style.border = "0px";
+  buttonFilterBug.style.border = "0px";
+  buttonFilterGrass.style.border = "0px";
+  buttonFilterGround.style.border = "0px";
+  buttonFilterFlying.style.border = "0px";
+  buttonFilterFairy.style.border = "0px";
+  buttonFilterElectric.style.border = "0px";
+  buttonFilterNormal.style.border = "0px";
+  buttonFilterPoison.style.border = "0px";
+  buttonFilterGhost.style.border = "0px";
+  buttonFilterDark.style.border = "0px";
+  buttonFilterIce.style.border = "0px";
+  buttonFilterPsychic.style.border = "0px";
+  buttonFilterDragon.style.border = "0px";
+  buttonFilterSteel.style.border = "0px";
+  buttonFilterRock.style.border = "0px";
+  buttonFilterMythic.style.border = "0px";
+  buttonFilterLegendary.style.border = "0px";
+  buttonFilterKanto.style.border = "0px";
+  buttonFilterJohto.style.border = "0px";  
+}
+
+let bestAtack = '';
 
 //Funciones de filtrado por tipo 
-buttonFilterWater.addEventListener("click",function(){
+buttonFilterWater.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "type", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "type", buttonFilterWater.value);
-    viewData.namesPokeMap(pokemones,ulContentCards);
+    selectElementNum.value="default";
+    selectElementName.value="default";
+    bestAtack = computeStats(data.pokemon,event.target.value);
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }
 }); 
 
-buttonFilterFire.addEventListener("click",function(){
+buttonFilterFire.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "type", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "type", buttonFilterFire.value);
-    viewData.namesPokeMap(pokemones,ulContentCards);
+    selectElementNum.value="default";
+    selectElementName.value="default";
+    bestAtack = computeStats(data.pokemon,event.target.value);
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }
 }); 
 
-buttonFilterFight.addEventListener("click",function(){
+buttonFilterFight.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "type", (event.target.value,"fighting"));
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "type", (buttonFilterFight.value, "fighting"));
-    viewData.namesPokeMap(pokemones,ulContentCards);
+    selectElementNum.value="default";
+    selectElementName.value="default";
+    bestAtack = computeStats(data.pokemon,event.target.value);
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }
 }); 
 
-buttonFilterBug.addEventListener("click",function(){
+buttonFilterBug.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "type", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "type", buttonFilterBug.value);
-    viewData.namesPokeMap(pokemones,ulContentCards);
+    selectElementNum.value="default";
+    selectElementName.value="default";
+    bestAtack = computeStats(data.pokemon,event.target.value);
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }
 }); 
 
-buttonFilterGrass.addEventListener("click",function(){
+buttonFilterGrass.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "type", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "type", buttonFilterGrass.value);
-    viewData.namesPokeMap(pokemones,ulContentCards);
+    selectElementNum.value="default";
+    selectElementName.value="default";
+    bestAtack = computeStats(data.pokemon,event.target.value);
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }
 }); 
 
-buttonFilterGround.addEventListener("click",function(){
+buttonFilterGround.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "type", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "type", buttonFilterGround.value);
-    viewData.namesPokeMap(pokemones,ulContentCards);
+    selectElementNum.value="default";
+    selectElementName.value="default";
+    bestAtack = computeStats(data.pokemon,event.target.value);
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }
 }); 
 
-buttonFilterFlying.addEventListener("click",function(){
+buttonFilterFlying.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "type", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "type", buttonFilterFlying.value);
-    viewData.namesPokeMap(pokemones,ulContentCards);
+    selectElementNum.value="default";
+    selectElementName.value="default";
+    bestAtack = computeStats(data.pokemon,event.target.value);
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }
 }); 
 
-buttonFilterFairy.addEventListener("click",function(){
+buttonFilterFairy.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "type", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "type", buttonFilterFairy.value);
-    viewData.namesPokeMap(pokemones,ulContentCards);
+    selectElementNum.value="default";
+    selectElementName.value="default";
+    bestAtack = computeStats(data.pokemon,event.target.value);
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }
 }); 
 
-buttonFilterElectric.addEventListener("click",function(){
+buttonFilterElectric.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "type", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "type", buttonFilterElectric.value);
-    viewData.namesPokeMap(pokemones,ulContentCards);
+    selectElementNum.value="default";
+    selectElementName.value="default";
+    bestAtack = computeStats(data.pokemon,event.target.value);
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }
 }); 
 
-buttonFilterNormal.addEventListener("click",function(){
+buttonFilterNormal.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "type", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "type", buttonFilterNormal.value);
-    viewData.namesPokeMap(pokemones,ulContentCards);
+    selectElementNum.value="default";
+    selectElementName.value="default";
+    bestAtack = computeStats(data.pokemon,event.target.value);
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }
 }); 
 
-buttonFilterPoison.addEventListener("click",function(){
+buttonFilterPoison.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "type", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "type", buttonFilterPoison.value);
-    viewData.namesPokeMap(pokemones,ulContentCards);
+    selectElementNum.value="default";
+    selectElementName.value="default";
+    bestAtack = computeStats(data.pokemon,event.target.value);
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }
 }); 
 
-buttonFilterGhost.addEventListener("click",function(){
+buttonFilterGhost.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "type", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "type", buttonFilterGhost.value);
-    viewData.namesPokeMap(pokemones,ulContentCards);
+    selectElementNum.value="default";
+    selectElementName.value="default";
+    bestAtack = computeStats(data.pokemon,event.target.value);
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }
 }); 
 
-buttonFilterDark.addEventListener("click",function(){
+buttonFilterDark.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "type", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "type", buttonFilterDark.value);
-    viewData.namesPokeMap(pokemones,ulContentCards);
+    selectElementNum.value="default";
+    selectElementName.value="default";
+    bestAtack = computeStats(data.pokemon,event.target.value);
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }
 }); 
 
-buttonFilterIce.addEventListener("click",function(){
+buttonFilterIce.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "type", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "type", buttonFilterIce.value);
-    viewData.namesPokeMap(pokemones,ulContentCards);
+    selectElementNum.value="default";
+    selectElementName.value="default";
+    bestAtack = computeStats(data.pokemon,event.target.value);
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }
 }); 
 
-buttonFilterPsychic.addEventListener("click",function(){
+buttonFilterPsychic.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "type", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "type", buttonFilterPsychic.value);
-    viewData.namesPokeMap(pokemones,ulContentCards);
+    selectElementNum.value="default";
+    selectElementName.value="default";
+    bestAtack = computeStats(data.pokemon,event.target.value);
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }
 }); 
 
-buttonFilterDragon.addEventListener("click",function(){
+buttonFilterDragon.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "type", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "type", buttonFilterDragon.value);
-    viewData.namesPokeMap(pokemones,ulContentCards);
+    selectElementNum.value="default";
+    selectElementName.value="default";
+    bestAtack = computeStats(data.pokemon,event.target.value);
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }
 }); 
 
-buttonFilterSteel.addEventListener("click",function(){
+buttonFilterSteel.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "type", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "type", buttonFilterSteel.value);
-    viewData.namesPokeMap(pokemones,ulContentCards);
+    selectElementNum.value="default";
+    selectElementName.value="default";
+    bestAtack = computeStats(data.pokemon,event.target.value);
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }
 }); 
 
-buttonFilterRock.addEventListener("click",function(){
+buttonFilterRock.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "type", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "type", buttonFilterRock.value);
-    viewData.namesPokeMap(pokemones,ulContentCards);
+    selectElementNum.value="default";
+    selectElementName.value="default";
+    bestAtack = computeStats(data.pokemon,event.target.value);
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }
 }); 
 
 //Funciones de filtrado para botones por rareza
-buttonFilterLegendary.addEventListener("click",function(){
+buttonFilterLegendary.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "pokemon-rarity", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else if(bestAtack !==''){
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "pokemon-rarity", buttonFilterLegendary.value);
+    selectElementNum.value="default";
+    selectElementName.value="default";
     viewData.namesPokeMap(pokemones,ulContentCards);
+  }
 }); 
 
-buttonFilterMythic.addEventListener("click",function(){
+buttonFilterMythic.addEventListener("click",function(event){
+  pokemones = filterData(pokemones, "pokemon-rarity", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else if(bestAtack !==''){
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "pokemon-rarity", buttonFilterMythic.value);
+    selectElementNum.value="default";
+    selectElementName.value="default";
     viewData.namesPokeMap(pokemones,ulContentCards);
+  }
 }); 
 
 
 //Funciones de filtrado para botones por region 
-buttonFilterKanto.addEventListener("click",function(){
+buttonFilterKanto.addEventListener("click",function(event){
+  pokemones = filterDataGeneration(pokemones, "generation", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else if(bestAtack !==''){
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "generation", buttonFilterKanto.value);
+    selectElementNum.value="default";
+    selectElementName.value="default";
     viewData.namesPokeMap(pokemones,ulContentCards);
+  }
 }); 
 
-buttonFilterJohto.addEventListener("click",function(){
+buttonFilterJohto.addEventListener("click",function(event){
+  pokemones = filterDataGeneration(pokemones, "generation", event.target.value);
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else if(bestAtack !==''){
+    viewData.namesPokeMapType(pokemones,ulContentCards,bestAtack);
+  }else{
     ulContentCards.innerHTML = '';
-    pokemones = filterData(pokemones, "generation", buttonFilterJohto.value);
+    selectElementNum.value="default";
+    selectElementName.value="default";
     viewData.namesPokeMap(pokemones,ulContentCards);
+  }
 }); 
 
+//Funciones de boton de limieza de filtros
 buttonCleanFilter.addEventListener("click", ()=>{
-    console.log(buttonCleanFilter);
-    pokemones = data.pokemon;
-    ulContentCards.innerHTML = '';
+  reinicioParametros()
 });
 
+//Selección de ordenado por nombre
+selectElementName.addEventListener("change",()=>{
+  ulContentCards.innerHTML = '';
+  pokemones = sortData(pokemones,selectElementName.name,selectElementName.value);
+  selectElementNum.value="default";
+  viewData.namesPokeMap(pokemones,ulContentCards);
+});
 
-/* 
-selectElement.addEventListener("input",()=>{
-    ulContentCards.innerHTML = '';
-    pokemones = sortData(pokemones,selectElement.value,selectElement.sortBy)
-    viewData.namesPokeMap(pokemones,ulContentCards);
-}); */
+//Selección de ordenado por numero
+selectElementNum.addEventListener("change",()=>{
+  ulContentCards.innerHTML = '';
+  pokemones = sortData(pokemones,selectElementNum.name,selectElementNum.value);
+  selectElementName.value="default";
+  viewData.namesPokeMap(pokemones,ulContentCards);
+});
