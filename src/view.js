@@ -131,4 +131,8 @@ const viewData = {
   }
 }
 
+<<<<<<< HEAD
 export default viewData;
+=======
+export default viewData;
+>>>>>>> b57ce044ba1887f33852d0a36f23c8ecc7db249a
