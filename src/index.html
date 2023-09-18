@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <header id="header" class="encabezado">
+  <header>
     <h1>Pokédex</h1>
   </header>
 
@@ -57,31 +57,24 @@
         </div>
       </div>
       <div class="divRenglon">
-        <div class="divColumnaSecundario">
-          <label for="filtroRareza">Filtra los pokemones por rareza</label>
           <div class="divRenglonSecundario">
             <button type="button" class="botonFiltroType" value="mythic" title="Mítico" id="filtroRareza"><!-- <img src="IconosTipoPokemon/legendarios.png" alt="x" />
               Mitico  --></button>
             <button type="button" class="botonFiltroType" value="legendary" title="Legendario"><!-- <img src="IconosTipoPokemon/legendarios.png" alt="x" /> 
               Legendario  --></button>
           </div>
-        </div>
-        <div class="divColumnaSecundario">
-          <label for="filtroRegion">Filtra los pokemones por región</label>
-          <div class="divRenglonSecundario">
-            <button type="button" class="botonFiltroType" value="kanto" title="Kanto" id="filtroRegion"></button>
-            <button type="button" class="botonFiltroType" value="johto" title="Johto"></button>
-          </div>
+        <div class="divRenglonSecundario">
+          <button type="button" class="botonFiltroType" value="kanto" title="Kanto" id="filtroRegion"></button>
+          <button type="button" class="botonFiltroType" value="johto" title="Johto"></button>
         </div>
       </div>
     </div>
     <div class="divRenglon">
       <div class="divColumnaSecundario">
-        <button type="button" class="botonGeneral" id="cambioVista"> Cambio de vista </button>
         <button type="button" class="botonGeneral" id="limpiarFiltro" data-testid="button-clear"> Limpiar filtros </button>
       </div>
       <div class="divColumnaSecundario">
-        <label for="name">Ordena los pokemones por nombre</label>
+        <label for="name"><br/>Ordena los pokemones por nombre</label>
         <select name="name" id="name" data-testid="select-sort" autocomplete="off"> <!-- carca un error en el navegador web, por eso se puso autocomplete=off, pero no se sabe el motivo -->
           <option hidden selected value="default">Selecciona una opción...</option>
           <option value="asc">Ascendente (A-Z)</option>
@@ -89,7 +82,7 @@
         </select>
       </div>
       <div class="divColumnaSecundario">
-        <label for="num">Ordena los pokemones por número</label>
+        <label for="num"><br/>Ordena los pokemones por número</label>
         <select name="num" id="num" data-testid="select-sort-num">
           <option hidden selected value="default">Selecciona una opción...</option>
           <option value="asc">Ascendente (1,2,3...)</option>
@@ -105,9 +98,6 @@
  -->
 
     <div id="root">
-      <ul>
-      </ul>
-
     </div>
 
   </main>

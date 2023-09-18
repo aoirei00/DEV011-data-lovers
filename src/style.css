@@ -29,7 +29,7 @@ footer{
 
 select {
     font-family: cursive;
-    width: 40%;
+    width: 80%;
 }
 
 .divColumna{
@@ -54,7 +54,7 @@ select {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    width: 20%;
     gap: 10px;
     padding: 10px;
     border: 0px solid green;
@@ -89,23 +89,7 @@ select {
     border: 0px solid red;
 }
 
-/* .botonFiltro{
-    border-radius: 20px;
-    padding: 5px 5px;
-    font-size: 1.1rem;
-    font-family: cursive;
-    width: 40px;  /*Ancho del icono, ajusta según el tamaño de tu icono 
-    height: 40px;  /*Altura automática para mantener la proporción 
-} */
-
-/* .botonFiltro img{
-    margin-left: 10px;  Espacio entre el texto y el icono 
-    width: 20px;  Ancho del icono, ajusta según el tamaño de tu icono 
-    height: 20px;  Altura automática para mantener la proporción 
- }
- */
-
- .botonGeneral{
+.botonGeneral{
     background-color: #1D8696;
     border:3px solid #176B78;
     color: #ffffff;
@@ -130,8 +114,22 @@ select {
     border: 3px solid #F6DA04;
 }
 
-
 #root{
+    width:97%;
+    margin-right: auto; /*Este y el siguiente, permiten centrar el objeto, no su contenido*/
+    margin-left: auto;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    row-gap: 20px;
+    border-color: 3px solid #1D8696;
+}
+
+
+ul{
     width:97%;
     margin-right: auto; /*Este y el siguiente, permiten centrar el objeto, no su contenido*/
     margin-left: auto;
@@ -184,99 +182,95 @@ dl dd{
 select#type{
     text-wrap: nowrap;
 }
-select#type option[value="water"] {
-    background-image: url('IconosTipoPokemon/agua.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */    
-}
 
 button[value="water"]{
     background-image: url('IconosTipoPokemon/agua.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="fire"]{
     background-image: url('IconosTipoPokemon/fuego.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="fight"]{
     background-image: url('IconosTipoPokemon/lucha.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="bug"]{
     background-image: url('IconosTipoPokemon/bicho.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="grass"]{
     background-image: url('IconosTipoPokemon/planta.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="ground"]{
     background-image: url('IconosTipoPokemon/tierra.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="flying"]{
     background-image: url('IconosTipoPokemon/volador.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="fairy"]{
     background-image: url('IconosTipoPokemon/hada.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="electric"]{
     background-image: url('IconosTipoPokemon/electrico.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="normal"]{
     background-image: url('IconosTipoPokemon/normal.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="poison"]{
     background-image: url('IconosTipoPokemon/veneno.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="ghost"]{
     background-image: url('IconosTipoPokemon/fantasma.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="dark"]{
     background-image: url('IconosTipoPokemon/siniestro.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="ice"]{
     background-image: url('IconosTipoPokemon/hielo.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="psychic"]{
     background-image: url('IconosTipoPokemon/psiquico.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="dragon"]{
     background-image: url('IconosTipoPokemon/dragon.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="steel"]{
     background-image: url('IconosTipoPokemon/acero.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="rock"]{
     background-image: url('IconosTipoPokemon/roca.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="mythic"]{
     background-image: url('IconosTipoPokemon/mitico.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="legendary"]{
     background-image: url('IconosTipoPokemon/legendario.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
 }
 button[value="kanto"]{
     background-image: url('IconosTipoPokemon/kanto.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
     border: 1px solid #5498C0;
 }
 button[value="johto"]{
     background-image: url('IconosTipoPokemon/johto.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
+    background-size: cover; 
     border: 1px solid #5498C0;
 }
 
@@ -293,13 +287,11 @@ button[value="johto"]{
 .fighting{
     background-color: #E3454E;    
     border: 3px solid #aa363c;    
-    /* color: #ffffff; */
 }
 
 .fight{
     background-color: #E3454E;    
     border: 3px solid #aa363c;    
-    /* color: #ffffff; */
 }
 
 .bug{
@@ -310,7 +302,6 @@ button[value="johto"]{
 .grass{
     background-color: #5AC37A;    
     border: 3px solid #4a9b62;    
-    /* color: #ffffff; */
 }
 
 .ground{
@@ -336,25 +327,21 @@ button[value="johto"]{
 .normal{
     background-color: #A7A69F;    
     border: 3px solid #747470;    
-    /* color: #ffffff; */
 }
 
 .poison{
     background-color: #C760D5;    
     border: 3px solid #91479b;    
-    /* color: #ffffff; */
 }
 
 .ghost{
     background-color: #7872D4;    
     border: 3px solid #5b579e;
-    /* color: #ffffff; */
 }
 
 .dark{
     background-color: #6C7180;    
     border: 3px solid #4e515a;    
-    /* color: #ffffff; */
 }
 
 .ice{
@@ -370,13 +357,11 @@ button[value="johto"]{
 .dragon{
     background-color: #0581BC;    
     border: 3px solid #046592;    
-    /* color: #ffffff; */
 }
 
 .steel{
     background-color: #56A8AA;    
     border: 3px solid #428081;    
-    /* color: #ffffff; */
 }
 
 .rock{
@@ -393,10 +378,5 @@ button[value="johto"]{
 .legendary{
     background-color: #333333;    
     border: 3px solid #000000;    
-    /* color: #ffffff; */
-<<<<<<< HEAD
-}
-=======
 }
 
->>>>>>> b57ce044ba1887f33852d0a36f23c8ecc7db249a
