@@ -63,6 +63,16 @@ describe('Test para la funcion sortData', () => {
     expect(sortedData[4].name).toBe('jigglypuff');
   });
 
+  it('debe mantener el orden ascendente por defecto cuando sortOrder no se especifica', () => {
+    const sortedData = sortData(fakeData, 'name');
+    // Agrega tus expectativas aquí, por ejemplo:
+    expect(sortedData[0].name).toBe('jigglypuff');
+    expect(sortedData[1].name).toBe('mew');
+    expect(sortedData[2].name).toBe('ninetales');
+    expect(sortedData[3].name).toBe('totodile');
+    expect(sortedData[4].name).toBe('tyranitar');
+  });
+
   // Agrega más pruebas para otras situaciones de ordenación si es necesario
 });
 
