@@ -8,16 +8,6 @@ export const filterDataGeneration = (data, filterBy, value) =>{
   return data.filter(element => element[filterBy]["name"].includes(value))
 };
   
-/*   export const filterDataTypeAttack = (data, value) =>{
-  return data.filter(element => {
-    let aux;
-    for (let i=0; i<element['quick-move'].length; i++){
-    aux = element['quick-move'][i]['type'].includes(value);
-    }
-    return aux;
-  })
-  }; */
-  
 export const sortData = (data, sortBy, sortOrder='asc') => {
   if (sortOrder === 'asc') {
     return data.sort((a, b) => a[sortBy].localeCompare(b[sortBy]));
@@ -35,7 +25,7 @@ export const computeStats = (data,type) =>{
   for (let poke=0; poke<data.length; poke++){
     for (let ataques=0; ataques<data[poke]['quick-move'].length; ataques++){
       if(data[poke]['quick-move'][ataques]['type'] === type){
-        aux.push(data[poke]['quick-move'][ataques]['base-damage']);
+        aux.push(Number(data[poke]['quick-move'][ataques]['base-damage']));
         if(data[poke]['quick-move'][ataques]['base-damage']>=Math.max(...aux)){
           Attacks['best'] = data[poke]['quick-move'][ataques];
         }else if(data[poke]['quick-move'][ataques]['base-damage']<=Math.min(...aux)){
