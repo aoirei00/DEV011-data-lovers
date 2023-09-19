@@ -30,30 +30,35 @@ const buttonFilterMythic = document.querySelector('button[value="mythic"]');
 const buttonFilterLegendary = document.querySelector('button[value="legendary"]');
 
 //Botones para filtrar por generación
-const selectFilterKanto = document.querySelector('select[data-testid="select-filter"]');
+const buttonFilterKanto = document.querySelector('button[value="kanto"]');
+const buttonFilterJohto = document.querySelector('button[value="johto"]');
 
-//Botones generales para limpieza del filtro
+//Botones generales para cambio de vista y limpieza del filtro
+//const buttonChangeView = document.querySelector('button[id="cambioVista"]');
 const buttonCleanFilter = document.querySelector('button[id="limpiarFiltro"]');
 
 //Lista para ordedar las tarjetas
 const selectElementName = document.getElementById("name");
+const selectElementNum = document.getElementById("num");
 
 //Selector de tarjetas ul
 const ulContentCards = document.getElementById("root");
 
 let bestAtack = '';
 
-//renderItems(pokemones,ulContentCards,bestAtack);
+renderItems(pokemones,ulContentCards,bestAtack);
 
 
 //Funciones de filtrado por tipo 
 buttonFilterWater.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     bestAtack = computeStats(data.pokemon,event.target.value);
     renderItems(pokemones,ulContentCards,bestAtack);
@@ -62,11 +67,13 @@ buttonFilterWater.addEventListener("click",function(event){
 
 buttonFilterFire.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     bestAtack = computeStats(data.pokemon,event.target.value);
     renderItems(pokemones,ulContentCards,bestAtack);
@@ -75,11 +82,13 @@ buttonFilterFire.addEventListener("click",function(event){
 
 buttonFilterFight.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", (event.target.value,"fighting"));
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     bestAtack = computeStats(data.pokemon,event.target.value);
     renderItems(pokemones,ulContentCards,bestAtack);
@@ -88,11 +97,13 @@ buttonFilterFight.addEventListener("click",function(event){
 
 buttonFilterBug.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     bestAtack = computeStats(data.pokemon,event.target.value);
     renderItems(pokemones,ulContentCards,bestAtack);
@@ -101,11 +112,13 @@ buttonFilterBug.addEventListener("click",function(event){
 
 buttonFilterGrass.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     bestAtack = computeStats(data.pokemon,event.target.value);
     renderItems(pokemones,ulContentCards,bestAtack);
@@ -114,11 +127,13 @@ buttonFilterGrass.addEventListener("click",function(event){
 
 buttonFilterGround.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     bestAtack = computeStats(data.pokemon,event.target.value);
     renderItems(pokemones,ulContentCards,bestAtack);
@@ -127,11 +142,13 @@ buttonFilterGround.addEventListener("click",function(event){
 
 buttonFilterFlying.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     bestAtack = computeStats(data.pokemon,event.target.value);
     renderItems(pokemones,ulContentCards,bestAtack);
@@ -140,11 +157,13 @@ buttonFilterFlying.addEventListener("click",function(event){
 
 buttonFilterFairy.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     bestAtack = computeStats(data.pokemon,event.target.value);
     renderItems(pokemones,ulContentCards,bestAtack);
@@ -153,11 +172,13 @@ buttonFilterFairy.addEventListener("click",function(event){
 
 buttonFilterElectric.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     bestAtack = computeStats(data.pokemon,event.target.value);
     renderItems(pokemones,ulContentCards,bestAtack);
@@ -166,11 +187,13 @@ buttonFilterElectric.addEventListener("click",function(event){
 
 buttonFilterNormal.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     bestAtack = computeStats(data.pokemon,event.target.value);
     renderItems(pokemones,ulContentCards,bestAtack);
@@ -179,11 +202,13 @@ buttonFilterNormal.addEventListener("click",function(event){
 
 buttonFilterPoison.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     bestAtack = computeStats(data.pokemon,event.target.value);
     renderItems(pokemones,ulContentCards,bestAtack);
@@ -192,11 +217,13 @@ buttonFilterPoison.addEventListener("click",function(event){
 
 buttonFilterGhost.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     bestAtack = computeStats(data.pokemon,event.target.value);
     renderItems(pokemones,ulContentCards,bestAtack);
@@ -205,11 +232,13 @@ buttonFilterGhost.addEventListener("click",function(event){
 
 buttonFilterDark.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     bestAtack = computeStats(data.pokemon,event.target.value);
     renderItems(pokemones,ulContentCards,bestAtack);
@@ -218,11 +247,13 @@ buttonFilterDark.addEventListener("click",function(event){
 
 buttonFilterIce.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     bestAtack = computeStats(data.pokemon,event.target.value);
     renderItems(pokemones,ulContentCards,bestAtack);
@@ -231,11 +262,13 @@ buttonFilterIce.addEventListener("click",function(event){
 
 buttonFilterPsychic.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     bestAtack = computeStats(data.pokemon,event.target.value);
     renderItems(pokemones,ulContentCards,bestAtack);
@@ -244,11 +277,13 @@ buttonFilterPsychic.addEventListener("click",function(event){
 
 buttonFilterDragon.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     bestAtack = computeStats(data.pokemon,event.target.value);
     renderItems(pokemones,ulContentCards,bestAtack);
@@ -257,11 +292,13 @@ buttonFilterDragon.addEventListener("click",function(event){
 
 buttonFilterSteel.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     bestAtack = computeStats(data.pokemon,event.target.value);
     renderItems(pokemones,ulContentCards,bestAtack);
@@ -270,11 +307,13 @@ buttonFilterSteel.addEventListener("click",function(event){
 
 buttonFilterRock.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     bestAtack = computeStats(data.pokemon,event.target.value);
     renderItems(pokemones,ulContentCards,bestAtack);
@@ -284,11 +323,13 @@ buttonFilterRock.addEventListener("click",function(event){
 //Funciones de filtrado para botones por rareza
 buttonFilterLegendary.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "pokemon-rarity", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     renderItems(pokemones,ulContentCards,bestAtack);
   }
@@ -296,53 +337,76 @@ buttonFilterLegendary.addEventListener("click",function(event){
 
 buttonFilterMythic.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "pokemon-rarity", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
     selectElementName.value="default";
     renderItems(pokemones,ulContentCards,bestAtack);
   }
 }); 
 
+
 //Funciones de filtrado para botones por region 
-selectFilterKanto.addEventListener("click",function(event){
-  if (event.currentTarget.selectedOptions[0].getAttribute("value")!== 'default'){
-    pokemones = filterDataGeneration(pokemones, "generation", event.currentTarget.selectedOptions[0].getAttribute("value"));
-    event.currentTarget.style.border = "3px solid red";
-    selectElementName.value="default";
-    if (pokemones.length===0){
-      reinicioParametros();
-      ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
-    }else{
-      renderItems(pokemones,ulContentCards,bestAtack);
-    }
+buttonFilterKanto.addEventListener("click",function(event){
+  pokemones = filterDataGeneration(pokemones, "generation", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
   }else{
+    selectElementNum.value="default";
+    selectElementName.value="default";
     renderItems(pokemones,ulContentCards,bestAtack);
   }
+}); 
 
+buttonFilterJohto.addEventListener("click",function(event){
+  pokemones = filterDataGeneration(pokemones, "generation", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
+  event.target.style.border = "3px solid red";
+  if (pokemones.length===0){
+    reinicioParametros();
+    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+  }else{
+    selectElementNum.value="default";
+    selectElementName.value="default";
+    renderItems(pokemones,ulContentCards,bestAtack);
+  }
 }); 
 
 //Funciones de boton de limpieza de filtros
 buttonCleanFilter.addEventListener("click", ()=>{
   reinicioParametros();
-  //renderItems(pokemones,ulContentCards,bestAtack);
+  renderItems(pokemones,ulContentCards,bestAtack);
 });
 
 //Selección de ordenado por nombre
 selectElementName.addEventListener("change",()=>{
   ulContentCards.innerHTML = '';
   pokemones = sortData(pokemones,selectElementName.name,selectElementName.value);
+  selectElementNum.value="default";
+  renderItems(pokemones,ulContentCards,bestAtack);
+});
+
+//Selección de ordenado por numero
+selectElementNum.addEventListener("change",()=>{
+  ulContentCards.innerHTML = '';
+  pokemones = sortData(pokemones,selectElementNum.name,selectElementNum.value);
+  selectElementName.value="default";
   renderItems(pokemones,ulContentCards,bestAtack);
 });
 
 //Funcion de reinicio de parámetros
 function reinicioParametros() {
-  pokemones = data.pokemon;
+  pokemones = sortData(data.pokemon,selectElementNum.name,'asc');
   bestAtack = '';
   ulContentCards.innerHTML = '';
-  selectFilterKanto.value="default";
+  selectElementNum.value="default";
   selectElementName.value="default";
   buttonFilterWater.style.border = "0px";
   buttonFilterFire.style.border = "0px";
@@ -364,7 +428,7 @@ function reinicioParametros() {
   buttonFilterRock.style.border = "0px";
   buttonFilterMythic.style.border = "0px";
   buttonFilterLegendary.style.border = "0px";
-  selectFilterKanto.value = "default";
-  selectFilterKanto.style.border = "0px";  
+  buttonFilterKanto.style.border = "0px";
+  buttonFilterJohto.style.border = "0px";  
   return pokemones;
 }

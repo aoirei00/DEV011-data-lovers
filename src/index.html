@@ -63,12 +63,8 @@
               Legendario  --></button>
           </div>
         <div class="divRenglonSecundario">
-          <label for="generation"><br/>Filtro por generación:</label>
-          <select name="generation" id="generation" data-testid="select-filter" autocomplete="off"> <!-- carca un error en el navegador web, por eso se puso autocomplete=off, pero no se sabe el motivo -->
-            <option hidden selected value="default">Todas las generaciones</option>
-            <option value="kanto">Kanto</option>
-            <option value="johto">Johto</option>
-          </select>
+          <button type="button" class="botonFiltroType" value="kanto" title="Kanto" id="filtroRegion"></button>
+          <button type="button" class="botonFiltroType" value="johto" title="Johto"></button>
         </div>
       </div>
     </div>
@@ -82,6 +78,14 @@
           <option hidden selected value="default">Selecciona una opción...</option>
           <option value="asc">Ascendente (A-Z)</option>
           <option value="desc">Descendente (Z-A)</option>
+        </select>
+      </div>
+      <div class="divColumnaSecundario">
+        <label for="num"><br/>Ordena los pokemones por número</label>
+        <select name="num" id="num" data-testid="select-sort-num">
+          <option hidden selected value="default">Selecciona una opción...</option>
+          <option value="asc">Ascendente (1,2,3...)</option>
+          <option value="desc">Descendente (...3,2,1)</option>
         </select>
       </div>
     </div>
