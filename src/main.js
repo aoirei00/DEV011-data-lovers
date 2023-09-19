@@ -2,10 +2,10 @@ import {filterData,filterDataGeneration,computeStats,sortData} from './dataFunct
 import data from './data/pokemon/pokemon.js';
 import {renderItems} from './view.js';
 
+//se extrae pokemón de data por practicidad
 let pokemones = data.pokemon
 
-
-// Botones para filtrar por typo de pokemon
+// Botones para filtrar por tipo de pokemon
 const buttonFilterWater = document.querySelector('button[value="water"]');
 const buttonFilterFire = document.querySelector('button[value="fire"]');
 const buttonFilterFight = document.querySelector('button[value="fight"]');
@@ -33,35 +33,35 @@ const buttonFilterLegendary = document.querySelector('button[value="legendary"]'
 const buttonFilterKanto = document.querySelector('button[value="kanto"]');
 const buttonFilterJohto = document.querySelector('button[value="johto"]');
 
-//Botones generales para cambio de vista y limpieza del filtro
-//const buttonChangeView = document.querySelector('button[id="cambioVista"]');
+//Botón para limpieza del filtro
 const buttonCleanFilter = document.querySelector('button[id="limpiarFiltro"]');
 
-//Lista para ordedar las tarjetas
+//Selects para ordedar las tarjetas
 const selectElementName = document.getElementById("name");
 const selectElementNum = document.getElementById("num");
 
-//Selector de tarjetas ul
+//Selector de Div para agregar las tarjetas en ul
 const ulContentCards = document.getElementById("root");
 
+//Elemento en blanco para guardar los mejores o peores ataques según sea el filtro aplicado
 let bestAtack = '';
 
+//Render inicial de todas las cards
 renderItems(pokemones,ulContentCards,bestAtack);
-
 
 //Funciones de filtrado por tipo 
 buttonFilterWater.addEventListener("click",function(event){
-  pokemones = filterData(pokemones, "type", event.target.value);
-  sortData(pokemones,selectElementNum.name,'asc')
-  event.target.style.border = "3px solid red";
-  if (pokemones.length===0){
-    reinicioParametros();
+  pokemones = filterData(pokemones, "type", event.target.value);    //filtro por tipo, actualizando la data (para filtros acumulativos)
+  sortData(pokemones,selectElementNum.name,'asc')    //Reordenado de la data al orden original
+  event.target.style.border = "3px solid red";    //Marcado de filtro seleccionado, con su contorno rojo
+  if (pokemones.length===0){    //Validación de existencia de pokemones con esos filtros
+    reinicioParametros();    //En caso de no haber pokemones, reinicio de parámetros y filtros
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
-  }else{
-    selectElementNum.value="default";
-    selectElementName.value="default";
-    bestAtack = computeStats(data.pokemon,event.target.value);
-    renderItems(pokemones,ulContentCards,bestAtack);
+  }else{    // en caso de haber pokemoes con las características del filtro...
+    selectElementNum.value="default";  //reinicia los ordenamientos
+    selectElementName.value="default";  
+    bestAtack = computeStats(data.pokemon,event.target.value);    //calcula los ataques (mejor y peor) para dicho tipo
+    renderItems(pokemones,ulContentCards,bestAtack);    //renderea las cards
   }
 }); 
 
@@ -322,22 +322,22 @@ buttonFilterRock.addEventListener("click",function(event){
 
 //Funciones de filtrado para botones por rareza
 buttonFilterLegendary.addEventListener("click",function(event){
-  pokemones = filterData(pokemones, "pokemon-rarity", event.target.value);
-  sortData(pokemones,selectElementNum.name,'asc')
-  event.target.style.border = "3px solid red";
-  if (pokemones.length===0){
-    reinicioParametros();
+  pokemones = filterData(pokemones, "pokemon-rarity", event.target.value);    //filtro por rareza, actualizando la data (para filtros acumulativos)
+  sortData(pokemones,selectElementNum.name,'asc');    //reordenado de la data al orden original    
+  event.target.style.border = "3px solid red";    //Marcado de filtro seleccionado, con su contorno rojo
+  if (pokemones.length===0){    //Validación de existencia de pokemones con esos filtros
+    reinicioParametros();    //En caso de no haber pokemones, reinicio de parámetros y filtros
     ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
-  }else{
+  }else{    // en caso de haber pokemoes con las características del filtro...
     selectElementNum.value="default";
     selectElementName.value="default";
-    renderItems(pokemones,ulContentCards,bestAtack);
+    renderItems(pokemones,ulContentCards,bestAtack);    //renderea las cards
   }
 }); 
 
 buttonFilterMythic.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "pokemon-rarity", event.target.value);
-  sortData(pokemones,selectElementNum.name,'asc')
+  sortData(pokemones,selectElementNum.name,'asc');
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -381,16 +381,16 @@ buttonFilterJohto.addEventListener("click",function(event){
 
 //Funciones de boton de limpieza de filtros
 buttonCleanFilter.addEventListener("click", ()=>{
-  reinicioParametros();
-  renderItems(pokemones,ulContentCards,bestAtack);
+  reinicioParametros();    //al limpiar se reinician los parámetros y filtros
+  renderItems(pokemones,ulContentCards,bestAtack);   //también se renderean todos los pokemones
 });
 
 //Selección de ordenado por nombre
 selectElementName.addEventListener("change",()=>{
-  ulContentCards.innerHTML = '';
-  pokemones = sortData(pokemones,selectElementName.name,selectElementName.value);
-  selectElementNum.value="default";
-  renderItems(pokemones,ulContentCards,bestAtack);
+  ulContentCards.innerHTML = '';    // Se borra el contenido de las cards actuales
+  pokemones = sortData(pokemones,selectElementName.name,selectElementName.value);     //se reordena la data
+  selectElementNum.value="default";    //se elimina el ordenamiento por número
+  renderItems(pokemones,ulContentCards,bestAtack);    //se muestran las nuevas cards
 });
 
 //Selección de ordenado por numero
@@ -403,11 +403,11 @@ selectElementNum.addEventListener("change",()=>{
 
 //Funcion de reinicio de parámetros
 function reinicioParametros() {
-  pokemones = sortData(data.pokemon,selectElementNum.name,'asc');
-  bestAtack = '';
-  ulContentCards.innerHTML = '';
-  selectElementNum.value="default";
-  selectElementName.value="default";
+  pokemones = sortData(data.pokemon,selectElementNum.name,'asc');     //Se reinicia la data en el orden original
+  bestAtack = '';    //re reinicia el objeto de los ataques por tipo (mejor y peor)
+  ulContentCards.innerHTML = '';   //Se borran las cards actuales
+  selectElementNum.value="default";   //se borran los filtros
+  selectElementName.value="default";    //se eliminan el contorno de los filtros antes seleccionados
   buttonFilterWater.style.border = "0px";
   buttonFilterFire.style.border = "0px";
   buttonFilterFight.style.border = "0px";

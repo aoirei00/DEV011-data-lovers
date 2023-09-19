@@ -2,23 +2,6 @@
 import { filterData, filterDataGeneration, sortData, computeStats } from '../src/dataFunctions.js';
 import { data as fakeData } from './data.js';// se renombra como fakeData
 
-
-
-/*describe('example', () => {
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
-
-describe('anotherExample', () => {
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});*/
-
-
 describe('Test para la funcion filterData', () => {
   it('debe filtrar correctamente los Pokémon de tipo "Fire"', () => {
     const filteredData = filterData(fakeData, 'type', 'fire');
@@ -43,7 +26,7 @@ describe('Test para la filterDataGeneration', () => {
 
 describe('Test para la funcion sortData', () => {
   it('Se debe ordenar correctamente los Pokémon por nombre en orden ascendente', () => {
-    const sortedData = sortData(fakeData, 'name');
+    const sortedData = sortData(fakeData, 'name', 'asc');
     // Agrega tus expectativas aquí, por ejemplo:
     expect(sortedData[0].name).toBe('jigglypuff');
     expect(sortedData[1].name).toBe('mew');
