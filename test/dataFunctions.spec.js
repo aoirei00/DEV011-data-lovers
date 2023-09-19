@@ -1,4 +1,4 @@
-import { example, anotherExample } from '../src/dataFunctions.js';
+//import { example, anotherExample } from '../src/dataFunctions.js';
 import { filterData, filterDataGeneration, sortData, computeStats } from '../src/dataFunctions.js';
 import { data as fakeData } from './data.js';// se renombra como fakeData
 
@@ -61,6 +61,16 @@ describe('Test para la funcion sortData', () => {
     expect(sortedData[2].name).toBe('ninetales');
     expect(sortedData[3].name).toBe('mew');
     expect(sortedData[4].name).toBe('jigglypuff');
+  });
+
+  it('debe mantener el orden ascendente por defecto cuando sortOrder no se especifica', () => {
+    const sortedData = sortData(fakeData, 'name');
+    // Agrega tus expectativas aquí, por ejemplo:
+    expect(sortedData[0].name).toBe('jigglypuff');
+    expect(sortedData[1].name).toBe('mew');
+    expect(sortedData[2].name).toBe('ninetales');
+    expect(sortedData[3].name).toBe('totodile');
+    expect(sortedData[4].name).toBe('tyranitar');
   });
 
   // Agrega más pruebas para otras situaciones de ordenación si es necesario
