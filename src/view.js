@@ -57,7 +57,7 @@ export const renderItems = (data,htmlContainer=ulContentCards,bestAttackType='')
     ddAttackCard.setAttribute("itemprop", "quick-move");
     data['quick-move'].forEach((entry)=>{
       const liQuickMove = document.createElement("li");
-      liQuickMove.textContent = entry.name.charAt(0).toUpperCase()+entry.name.slice(1)+ " (Daño:"+entry['base-damage']+")";
+      liQuickMove.textContent = entry.name.charAt(0).toUpperCase()+entry.name.slice(1)+ " (Daño: "+entry['base-damage']+")";
       ddAttackCard.appendChild(liQuickMove);
       return ddAttackCard;
     })
@@ -91,8 +91,8 @@ export const renderItems = (data,htmlContainer=ulContentCards,bestAttackType='')
       ddBestAttack.setAttribute("itemprop", "ataque");
       ddWorstAttack.setAttribute("itemprop", "ataque");
       
-      ddBestAttack.textContent =  bestAttackType.best.name.charAt(0).toUpperCase()+bestAttackType.best.name.slice(1) + " (Daño:"+bestAttackType.best['base-damage']+")";
-      ddWorstAttack.textContent = bestAttackType.worst.name.charAt(0).toUpperCase()+bestAttackType.worst.name.slice(1) + " (Daño:"+bestAttackType.worst['base-damage']+")";
+      ddBestAttack.textContent =  bestAttackType.best.name.charAt(0).toUpperCase()+bestAttackType.best.name.slice(1) + " (Daño: "+bestAttackType.best['base-damage']+")";
+      ddWorstAttack.textContent = bestAttackType.worst.name.charAt(0).toUpperCase()+bestAttackType.worst.name.slice(1) + " (Daño: "+bestAttackType.worst['base-damage']+")";
       dlElementCard.appendChild(dtBestAttack);
       dlElementCard.appendChild(ddBestAttack);
       dlElementCard.appendChild(dtWorstAttack);
