@@ -1,35 +1,61 @@
+@font-face {
+    font-family:pokemon;
+    src:url("fonts/PixeBold.ttf"),
+        url("fonts/Pixel.ttf");   
+      
+  }
+
+
+
 h1{
-    text-align: center;
+    text-align:left;
+    font-size: 130px;
+    font-family:pokemon, "PixelBold";
+    margin-left: 20px;
+    
+    
 }
 
-h2{
-    text-align: center;
-}
 
 body{
-    background-color: #effff9;
+
+    background-image: url(IconosTipoPokemon/background.jpg);
     font-size: 1.1rem;
-    font-family: cursive;
+    
 }
 
 header {
-/*     background-color: white;
-    border-bottom: 3px solid #5AC37A; */
+    background-color: #e35656;
+    height: 150px;
     margin-left: auto;
     margin-right: auto;
+    text-align: left;
+    
 }
+ .imgHeader{
+    width: 125px;
+    height: 90px;
+ }
 
 footer{
-/*     background-color: white;
-    border-top: 3px solid #5AC37A; */
     margin-left: auto;
     margin-right: auto;
     text-align: right;
+    font-size: x-large;
+    font-family:pokemon, "PixelBold";
+    
 }
 
 select {
-    font-family: cursive;
+    font-family: pokemon, "Pixel";
     width: 80%;
+    height: 30px; 
+    padding: 3px; 
+    font-size: 16px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    background-color: #9c9a9a; 
+    color: #333; /
 }
 
 .divColumna{
@@ -39,9 +65,10 @@ select {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    width: 95%;
+    width: 100%;
     gap: 10px;
-    padding: 10px;
+    padding: 0px;
+    background-color: #1c0d02;
     border: 0px solid violet;
     margin-bottom: 10px;
     align-items: center;
@@ -56,7 +83,7 @@ select {
     margin-right: auto;
     width: 20%;
     gap: 10px;
-    padding: 10px;
+    padding: 0px;
     border: 0px solid green;
     align-items: center;
 }
@@ -68,11 +95,24 @@ select {
     justify-content: space-evenly;
     margin-left: auto;
     margin-right: auto;
-    width: 95%;
+    width: 98%;
     gap: 10px;
-    padding: 5px;
+    padding: 10px;
     border: 0px solid blue;
-    background-color: #e3f7ef;
+    background:none;
+    
+}
+
+.filtroLabel{
+    color:#fafbfd;
+    margin-top: 5px;
+    font-family: pokemon, "Pixel";
+}
+
+.labelSelect{
+    font-family:pokemon, "PixelBold";
+    font-size: x-large;
+    
 }
 
 .divRenglonSecundario{
@@ -90,22 +130,18 @@ select {
 }
 
 .botonGeneral{
-    background-color: #1D8696;
-    border:3px solid #176B78;
-    color: #ffffff;
-    padding: 10px;
-    font-size: 1.1rem;
-    font-family: cursive;
-    border-radius: 10px;
-    height: 50%;
-    margin-top: auto;
-    margin-bottom: auto;
+    border-radius: 30px;
+    width: 30px;  /*Ancho del icono, ajusta según el tamaño de tu icono */
+    height: 30px;  /*Altura automática para mantener la proporción */
+    border: none; /* Elimina el borde del botón */
+    cursor: pointer; 
+    /*text-indent: -9999px;  Oculta el texto del botón (opcional) */
 }
 
 .botonFiltroType{
     border-radius: 30px;
-    width: 60px;  /*Ancho del icono, ajusta según el tamaño de tu icono */
-    height: 60px;  /*Altura automática para mantener la proporción */
+    width: 30px;  /*Ancho del icono, ajusta según el tamaño de tu icono */
+    height: 30px;  /*Altura automática para mantener la proporción */
     border: none; /* Elimina el borde del botón */
     cursor: pointer; 
     /*text-indent: -9999px;  Oculta el texto del botón (opcional) */
@@ -150,24 +186,31 @@ ul{
     /*border: 10px solid #F6DA04;    este no lo ejecuta porque tiene deblarado borde en los typos de pokemon*/  
     width: 300px;
     padding: 0.6rem;
-    border-radius: 10px;
+    border-radius: 50px;
     justify-content: space-evenly;
     align-items: center;
+    font-family: pokemon, "Pixel";
 }
 
 .imgPokemon{
-    width: 40%;
-    background-color: none;
+    width: 65%;
     border-radius: 10px;
+    
 }
 
 dl{
     width: 85%;
     padding: 1rem;
-    background-color: rgb(250, 227, 227);
-    border-radius: 10px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+    /* Degradado de negro transparente encima de una imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de fondo para cubrir el elemento */
+    background-position: center; /* Centra el fondo */
+    color: white;
+    border-radius: 20px ;
+    border: 2px solid #1c0d02;
     margin-bottom: auto;
 }
+
 
 dl dt{
     background-color: none;
@@ -175,12 +218,18 @@ dl dt{
 }
 
 dl dd{
-    background-color: rgb(255, 248, 251);
     padding: 5px;
 }
 
 select#type{
     text-wrap: nowrap;
+    
+}
+
+#limpiarFiltro{
+    background-image: url('IconosTipoPokemon/refresh.png');
+    background-size: cover;
+
 }
 
 button[value="water"]{
@@ -275,99 +324,119 @@ button[value="johto"]{
 }
 
 .water{
-    background-color: #71C3E4;
-    border: 3px solid #5894ac;
+    background-image:url('IconosTipoPokemon/backtar.jpg');
+    background-size: cover;
+    border: 10px solid #71C3E4 ;
 }
 
 .fire{
-    background-color: #FFAD4C; 
-    border: 3px solid #cc8e41; 
+    background-image:url('IconosTipoPokemon/backtar.jpg');
+    border: 10px solid #FFAD4C; 
+    background-size: cover;
 }
 
 .fighting{
-    background-color: #E3454E;    
-    border: 3px solid #aa363c;    
+    background-image:url('IconosTipoPokemon/backtar.jpg');    
+    border: 10px solid #E3454E; 
+    background-size: cover;   
 }
 
 .fight{
-    background-color: #E3454E;    
-    border: 3px solid #aa363c;    
+    background-image:url('IconosTipoPokemon/backtar.jpg');    
+    border: 10px solid #E3454E; 
+    background-size: cover;
 }
 
 .bug{
-    background-color: #A9C732;
-    border: 3px solid #829927;
+    background-image:url('IconosTipoPokemon/backtar.jpg');    
+    border: 10px solid #A9C732; 
+    background-size: cover;
 }
 
 .grass{
-    background-color: #5AC37A;    
-    border: 3px solid #4a9b62;    
+    background-image:url('IconosTipoPokemon/backtar.jpg');    
+    border: 10px solid #5AC37A;
+    background-size: cover; 
 }
 
 .ground{
-    background-color: #D49768;    
-    border: 3px solid #a77854;    
+    background-image:url('IconosTipoPokemon/backtar.jpg');    
+    border: 10px solid #D49768;  
+    background-size: cover;
 }
 
 .flying{
-    background-color: #A4BFED;    
-    border: 3px solid #8195b8; 
+    background-image:url('IconosTipoPokemon/backtar.jpg');    
+    border: 10px solid #A4BFED;
+    background-size: cover;
 }
 
 .fairy{
-    background-color: #F2A5E4;    
-    border: 3px solid #b87fad;
+    background-image:url('IconosTipoPokemon/backtar.jpg');    
+    border: 10px solid #F2A5E4;
+    background-size: cover;
 }
 
 .electric{
-    background-color: #F9E171;    
-    border: 3px solid #bdaa57; 
+    background-image:url('IconosTipoPokemon/backtar.jpg');    
+    border: 10px solid #F9E171;
+    background-size: cover;
 }
 
 .normal{
-    background-color: #A7A69F;    
-    border: 3px solid #747470;    
+    background-image:url('IconosTipoPokemon/backtar.jpg');    
+    border: 10px solid #A7A69F;  
+    background-size: cover; 
 }
 
 .poison{
-    background-color: #C760D5;    
-    border: 3px solid #91479b;    
+    background-image:url('IconosTipoPokemon/backtar.jpg');    
+    border: 10px solid #C760D5;  
+    background-size: cover; 
 }
 
 .ghost{
-    background-color: #7872D4;    
-    border: 3px solid #5b579e;
+    background-image:url('IconosTipoPokemon/backtar.jpg');    
+    border: 10px solid #7872D4;
+    background-size: cover;
+    
 }
 
 .dark{
-    background-color: #6C7180;    
-    border: 3px solid #4e515a;    
+    background-image:url('IconosTipoPokemon/backtar.jpg');    
+    border: 10px solid #6C7180;  
+    background-size: cover; 
 }
 
 .ice{
-    background-color: #91DCD6;    
-    border: 3px solid #71a7a2;
+    background-image:url('IconosTipoPokemon/backtar.jpg');    
+    border: 10px solid #91DCD6;
+    background-size: cover;
 }
 
 .psychic{
-    background-color: #FEA299;    
-    border: 3px solid #be7c76;
+    background-image:url('IconosTipoPokemon/backtar.jpg');    
+    border: 10px solid #FEA299;
+    background-size: cover;
 }
 
 .dragon{
-    background-color: #0581BC;    
-    border: 3px solid #046592;    
+    background-image:url('IconosTipoPokemon/backtar.jpg');    
+    border: 10px solid #0581BC; 
+    background-size: cover;
 }
 
 .steel{
-    background-color: #56A8AA;    
-    border: 3px solid #428081;    
+    background-image:url('IconosTipoPokemon/backtar.jpg');    
+    border: 10px solid #56A8AA;  
+    background-size: cover;
 }
 
 .rock{
-    background-color: #D5CA92;    
-    border: 3px solid #b8af7f; 
-    padding-right:30px;
+    background-image:url('IconosTipoPokemon/backtar.jpg');    
+    border: 10px solid #D5CA92;
+    background-size: cover;
+    
 }
 
 .nolegendary{
