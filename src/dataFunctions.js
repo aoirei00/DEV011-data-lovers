@@ -35,7 +35,7 @@ export const computeStats = (data,type) =>{
   for (let poke=0; poke<data.length; poke++){
     for (let ataques=0; ataques<data[poke]['quick-move'].length; ataques++){
       if(data[poke]['quick-move'][ataques]['type'] === type){
-        aux.push(data[poke]['quick-move'][ataques]['base-damage']);
+        aux.push(Number(data[poke]['quick-move'][ataques]['base-damage']));
         if(data[poke]['quick-move'][ataques]['base-damage']>=Math.max(...aux)){
           Attacks['best'] = data[poke]['quick-move'][ataques];
         }else if(data[poke]['quick-move'][ataques]['base-damage']<=Math.min(...aux)){

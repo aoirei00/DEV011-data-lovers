@@ -52,6 +52,7 @@ renderItems(pokemones,ulContentCards,bestAtack);
 //Funciones de filtrado por tipo 
 buttonFilterWater.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -66,6 +67,7 @@ buttonFilterWater.addEventListener("click",function(event){
 
 buttonFilterFire.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -80,6 +82,7 @@ buttonFilterFire.addEventListener("click",function(event){
 
 buttonFilterFight.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", (event.target.value,"fighting"));
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -94,6 +97,7 @@ buttonFilterFight.addEventListener("click",function(event){
 
 buttonFilterBug.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -108,6 +112,7 @@ buttonFilterBug.addEventListener("click",function(event){
 
 buttonFilterGrass.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -122,6 +127,7 @@ buttonFilterGrass.addEventListener("click",function(event){
 
 buttonFilterGround.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -136,6 +142,7 @@ buttonFilterGround.addEventListener("click",function(event){
 
 buttonFilterFlying.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -150,6 +157,7 @@ buttonFilterFlying.addEventListener("click",function(event){
 
 buttonFilterFairy.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -164,6 +172,7 @@ buttonFilterFairy.addEventListener("click",function(event){
 
 buttonFilterElectric.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -178,6 +187,7 @@ buttonFilterElectric.addEventListener("click",function(event){
 
 buttonFilterNormal.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -192,6 +202,7 @@ buttonFilterNormal.addEventListener("click",function(event){
 
 buttonFilterPoison.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -206,6 +217,7 @@ buttonFilterPoison.addEventListener("click",function(event){
 
 buttonFilterGhost.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -220,6 +232,7 @@ buttonFilterGhost.addEventListener("click",function(event){
 
 buttonFilterDark.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -234,6 +247,7 @@ buttonFilterDark.addEventListener("click",function(event){
 
 buttonFilterIce.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -248,6 +262,7 @@ buttonFilterIce.addEventListener("click",function(event){
 
 buttonFilterPsychic.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -262,6 +277,7 @@ buttonFilterPsychic.addEventListener("click",function(event){
 
 buttonFilterDragon.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -276,6 +292,7 @@ buttonFilterDragon.addEventListener("click",function(event){
 
 buttonFilterSteel.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -290,6 +307,7 @@ buttonFilterSteel.addEventListener("click",function(event){
 
 buttonFilterRock.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "type", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -305,6 +323,7 @@ buttonFilterRock.addEventListener("click",function(event){
 //Funciones de filtrado para botones por rareza
 buttonFilterLegendary.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "pokemon-rarity", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -318,6 +337,7 @@ buttonFilterLegendary.addEventListener("click",function(event){
 
 buttonFilterMythic.addEventListener("click",function(event){
   pokemones = filterData(pokemones, "pokemon-rarity", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -333,6 +353,7 @@ buttonFilterMythic.addEventListener("click",function(event){
 //Funciones de filtrado para botones por region 
 buttonFilterKanto.addEventListener("click",function(event){
   pokemones = filterDataGeneration(pokemones, "generation", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -346,6 +367,7 @@ buttonFilterKanto.addEventListener("click",function(event){
 
 buttonFilterJohto.addEventListener("click",function(event){
   pokemones = filterDataGeneration(pokemones, "generation", event.target.value);
+  sortData(pokemones,selectElementNum.name,'asc')
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
@@ -381,7 +403,7 @@ selectElementNum.addEventListener("change",()=>{
 
 //Funcion de reinicio de parámetros
 function reinicioParametros() {
-  pokemones = data.pokemon;
+  pokemones = sortData(data.pokemon,selectElementNum.name,'asc');
   bestAtack = '';
   ulContentCards.innerHTML = '';
   selectElementNum.value="default";

@@ -10,7 +10,7 @@ document.body.innerHTML = html;
 
 const renderDOM = (data) => {
   const items = renderItems(data);
-  console.log(items);
+  //console.log(items);
   // function renderItems can return html string or an node element
   if (typeof items === 'string') {
     document.querySelector('#root').innerHTML = items;
