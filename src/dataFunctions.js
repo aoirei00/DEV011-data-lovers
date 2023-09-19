@@ -13,10 +13,10 @@ export const sortData = (data, sortBy, sortOrder='asc') => {
     return data.sort((a, b) => a[sortBy].localeCompare(b[sortBy]));
   } else if (sortOrder === 'desc') {
     return data.sort((a, b) => b[sortBy].localeCompare(a[sortBy]));
-  } else {
+  } /* else {
     // Si no se especifica el orden se devuelve el arreglo original sin cambios (asc)
     return data;
-  }
+  } */
 };
   
 export const computeStats = (data,type) =>{
@@ -28,7 +28,10 @@ export const computeStats = (data,type) =>{
         aux.push(Number(data[poke]['quick-move'][ataques]['base-damage']));
         if(data[poke]['quick-move'][ataques]['base-damage']>=Math.max(...aux)){
           Attacks['best'] = data[poke]['quick-move'][ataques];
-        }else if(data[poke]['quick-move'][ataques]['base-damage']<=Math.min(...aux)){
+          if ( Math.min(...aux)===Math.max(...aux)){
+            Attacks['worst'] = data[poke]['quick-move'][ataques];
+          }
+        }else if(data[poke]['quick-move'][ataques]['base-damage'] <= Math.min(...aux)){
           Attacks['worst'] = data[poke]['quick-move'][ataques];
         }
       }
