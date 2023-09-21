@@ -5,6 +5,7 @@ export const renderItems = (data,htmlContainer=ulContentCards,bestAttackType='')
   // Limpiar el contenido del contenedor
   htmlContainer = document.getElementById("root");
   htmlContainer.innerHTML = "";
+  //creamos el elemento ul para guardar las li
   const ulElementCard = document.createElement("ul");
 
   // Recorrer los datos y agregar las tarjetas de Pokémon
@@ -55,7 +56,7 @@ export const renderItems = (data,htmlContainer=ulContentCards,bestAttackType='')
     const ddAttackCard = document.createElement("dd");
     dtAttackCard.textContent = "Ataque rápido:";
     ddAttackCard.setAttribute("itemprop", "quick-move");
-    data['quick-move'].forEach((entry)=>{
+    data['quick-move'].forEach((entry)=>{   //se enlistan cada uno de los ataques rápidos
       const liQuickMove = document.createElement("li");
       liQuickMove.textContent = entry.name.charAt(0).toUpperCase()+entry.name.slice(1)+ " (Daño: "+entry['base-damage']+")";
       ddAttackCard.appendChild(liQuickMove);
@@ -76,30 +77,36 @@ export const renderItems = (data,htmlContainer=ulContentCards,bestAttackType='')
     liElementCard.appendChild(imgElementCard);
     liElementCard.appendChild(dlElementCard);
     
-    //Diseño en caso de haber seleccionado algún typo previamente
+    //Diseño en caso de haber seleccionado algún filtro de tipo previamente (arreglado en caso de no haber ataques de cierto tipo)
     if (bestAttackType!=='' && bestAttackType.best.type!==undefined){
       // Crear elementos <dt> y <dd> para los mejores y peores ataques
       const dtBestAttack = document.createElement("dt");
       const dtWorstAttack = document.createElement("dt");
-
       const ddBestAttack = document.createElement("dd");
       const ddWorstAttack = document.createElement("dd");
 
+      //agrega texto dinámicopor tipo de ataque
       dtBestAttack.textContent = "Mejor ataque tipo "+ bestAttackType.best.type.charAt(0).toUpperCase()+bestAttackType.best.type.slice(1);
       dtWorstAttack.textContent = "Peor ataque tipo "+ bestAttackType.worst.type.charAt(0).toUpperCase()+bestAttackType.worst.type.slice(1);
 
+      //agregar descripción de microdata
       ddBestAttack.setAttribute("itemprop", "ataque");
       ddWorstAttack.setAttribute("itemprop", "ataque");
       
+      //información de los ataques, nombre y daño
       ddBestAttack.textContent =  bestAttackType.best.name.charAt(0).toUpperCase()+bestAttackType.best.name.slice(1) + " (Daño: "+bestAttackType.best['base-damage']+")";
       ddWorstAttack.textContent = bestAttackType.worst.name.charAt(0).toUpperCase()+bestAttackType.worst.name.slice(1) + " (Daño: "+bestAttackType.worst['base-damage']+")";
+
+      //agrega los elementos creados a la card  
       dlElementCard.appendChild(dtBestAttack);
       dlElementCard.appendChild(ddBestAttack);
       dlElementCard.appendChild(dtWorstAttack);
       dlElementCard.appendChild(ddWorstAttack);
     }
+    //incorpora las li en el ul
     ulElementCard.appendChild(liElementCard);
   });
+  //incorpora las ul en el div #root
   htmlContainer.appendChild(ulElementCard)
   return htmlContainer.innerHTML;
 }

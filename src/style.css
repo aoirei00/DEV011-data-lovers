@@ -1,27 +1,21 @@
+/* tipografía */
 @font-face {
     font-family:pokemon;
     src:url("fonts/PixeBold.ttf"),
         url("fonts/Pixel.ttf");   
-      
   }
 
-
-
+/* formatos generales de selectores*/
 h1{
     text-align:left;
     font-size: 130px;
     font-family:pokemon, "PixelBold";
     margin-left: 20px;
-    
-    
 }
 
-
 body{
-
     background-image: url(IconosTipoPokemon/background.jpg);
-    font-size: 1.1rem;
-    
+    font-size: 1.2rem;
 }
 
 header {
@@ -30,12 +24,7 @@ header {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    
 }
- .imgHeader{
-    width: 125px;
-    height: 90px;
- }
 
 footer{
     margin-left: auto;
@@ -43,7 +32,6 @@ footer{
     text-align: right;
     font-size: x-large;
     font-family:pokemon, "PixelBold";
-    
 }
 
 select {
@@ -51,13 +39,25 @@ select {
     width: 80%;
     height: 30px; 
     padding: 3px; 
-    font-size: 16px; 
+    font-size: 18px; 
     border: 1px solid #ccc; 
     border-radius: 8px; 
     background-color: #9c9a9a; 
     color: #333; /
 }
 
+/* formato imagenes */
+.imgHeader{
+    width: 125px;
+    height: 90px;
+}
+
+.imgPokemon{
+    width: 65%;
+    border-radius: 10px;
+}
+
+/* Diseño de contenedores para botones de filtro y ordenamiento */
 .divColumna{
     display: flex;
     flex-wrap: wrap;
@@ -100,9 +100,9 @@ select {
     padding: 10px;
     border: 0px solid blue;
     background:none;
-    
 }
 
+/* Diseño de labels */
 .filtroLabel{
     color:#fafbfd;
     margin-top: 5px;
@@ -112,23 +112,9 @@ select {
 .labelSelect{
     font-family:pokemon, "PixelBold";
     font-size: x-large;
-    
 }
 
-.divRenglonSecundario{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-    gap: 10px;
-    background-color: #ceece0;
-    padding: 5px;
-    border: 0px solid red;
-}
-
+/* diseño del botón de limpieza de filtros */
 .botonGeneral{
     border-radius: 30px;
     width: 30px;  /*Ancho del icono, ajusta según el tamaño de tu icono */
@@ -138,6 +124,13 @@ select {
     /*text-indent: -9999px;  Oculta el texto del botón (opcional) */
 }
 
+#limpiarFiltro{
+    background-image: url('IconosTipoPokemon/refresh.png');
+    background-size: cover;
+
+}
+
+/* diseño del botón de filtro */
 .botonFiltroType{
     border-radius: 30px;
     width: 30px;  /*Ancho del icono, ajusta según el tamaño de tu icono */
@@ -150,6 +143,7 @@ select {
     border: 3px solid #F6DA04;
 }
 
+/* diseño del contenedor de ul, ul, cards y contenido de las cards de forma jerarquica*/
 #root{
     width:97%;
     margin-right: auto; /*Este y el siguiente, permiten centrar el objeto, no su contenido*/
@@ -163,7 +157,6 @@ select {
     row-gap: 20px;
     border-color: 3px solid #1D8696;
 }
-
 
 ul{
     width:97%;
@@ -192,12 +185,6 @@ ul{
     font-family: pokemon, "Pixel";
 }
 
-.imgPokemon{
-    width: 65%;
-    border-radius: 10px;
-    
-}
-
 dl{
     width: 85%;
     padding: 1rem;
@@ -211,7 +198,6 @@ dl{
     margin-bottom: auto;
 }
 
-
 dl dt{
     background-color: none;
     font-weight: 600;
@@ -223,15 +209,9 @@ dl dd{
 
 select#type{
     text-wrap: nowrap;
-    
 }
 
-#limpiarFiltro{
-    background-image: url('IconosTipoPokemon/refresh.png');
-    background-size: cover;
-
-}
-
+/* diseño de los botones de filtro por tipo de pokemón */
 button[value="water"]{
     background-image: url('IconosTipoPokemon/agua.png');
     background-size: cover; 
@@ -304,6 +284,8 @@ button[value="rock"]{
     background-image: url('IconosTipoPokemon/roca.png');
     background-size: cover; 
 }
+
+/* diseño de los botones de filtro por tipo rareza */
 button[value="mythic"]{
     background-image: url('IconosTipoPokemon/mitico.png');
     background-size: cover; 
@@ -312,6 +294,8 @@ button[value="legendary"]{
     background-image: url('IconosTipoPokemon/legendario.png');
     background-size: cover; 
 }
+
+/* diseño de los botones de filtro por tipo región */
 button[value="kanto"]{
     background-image: url('IconosTipoPokemon/kanto.png');
     background-size: cover; 
@@ -323,6 +307,7 @@ button[value="johto"]{
     border: 1px solid #5498C0;
 }
 
+/* diseño dinámico de las cards */
 .water{
     background-image:url('IconosTipoPokemon/backtar.jpg');
     background-size: cover;
@@ -438,14 +423,3 @@ button[value="johto"]{
     background-size: cover;
     
 }
-
-.nolegendary{
-    background-color: #F5F5F5;    
-    border: 3px solid #E6E6E6;    
-}
-
-.legendary{
-    background-color: #333333;    
-    border: 3px solid #000000;    
-}
-
