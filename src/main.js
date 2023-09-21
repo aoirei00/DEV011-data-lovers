@@ -146,7 +146,7 @@ buttonFilterFlying.addEventListener("click",function(event){
   event.target.style.border = "3px solid red";
   if (pokemones.length===0){
     reinicioParametros();
-    ulContentCards.innerHTML="<h2>No hay pokemónes con esas características.</h2>";
+    ulContentCards.innerHTML="<h2>No hay pokemons con esas características.</h2>";
   }else{
     selectElementNum.value="default";
     selectElementName.value="default";
